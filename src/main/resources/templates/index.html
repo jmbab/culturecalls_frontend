@@ -7,53 +7,54 @@
         <meta name="author" content="" />
         <title>Culture Calls</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../static/styles.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     </head>
     <body onload="navBarLocation()">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-md navbar-light bg-light " id="navbar" style="height: 10%">
-            <ul class="navbar-nav align-items-center m-auto container" id="navContainer" style="font-size: 5.25vw;">
 
-                <li class="nav-item">
-                    <!-- brug active for at highlighte den side man er inde på-->
-                    <a class="nav-link active" href="#">Udforsk</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Søg</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img src="../static/heart-small.png" class="img-fluid" style="height: 5.25vw" alt="">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Min profil</a>
-                </li>
-
-                <!-- dropdown -->
-                <li class="nav-item dropdown" hidden>
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        More
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">test</a></li>
-                        <li><a class="dropdown-item" href="#">test2</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">test3</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-</nav>
         <!-- Page Content-->
         <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-light " id="navbar" style="height: 10%">
+                <ul class="navbar-nav align-items-center m-auto container" style="font-size: 5.25vw;">
+
+                    <li class="nav-item">
+                        <!-- brug active for at highlighte den side man er inde på-->
+                        <a class="nav-link active" href="index.html">Udforsk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Søg</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorites.html">
+                            <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5.25vw" alt="">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Min profil</a>
+                    </li>
+
+                    <!-- dropdown -->
+                    <li class="nav-item dropdown" hidden>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">test</a></li>
+                            <li><a class="dropdown-item" href="#">test2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">test3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
             <!-- Jumbotron Header-->
             <header class="jumbotron my-4">
                 <h1 class="display-3">Intro??</h1>
@@ -63,7 +64,7 @@
         <div class="row text-center">
           <div class="col-lg-3 col-md-6 mb-4">
            <div class="card h-100">
-           <img class="card-img-top" src="../src/assets/folketeatret.jpeg" alt="..." />
+           <img class="card-img-top" src="../static/assets/folketeatret.jpeg" alt="..." />
             <div class="card-body">
                  <h4 class="card-title">The Robot Project</h4>
                 <p class="showmore"> Flyvende Grise gæster Folketeatret under CPH Stage
@@ -86,7 +87,7 @@
 
             <div class="col-lg-3 col-md-6 mb-4">
              <div class="card h-100">
-                        <img class="card-img-top" src="../src/assets/nørrebroteater.jpeg" alt="..." />
+                        <img class="card-img-top" src="../static/assets/nørrebroteater.jpeg" alt="..." />
                  <div class="card-body">
                      <h4 class="card-title">En Folkefjende</h4>
                      <p class="showmore">ET UNDERHOLDENDE DRAMA OM SANDHED OG MAGT
@@ -109,7 +110,7 @@
 
             <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../src/assets/teaterfår.jpeg" alt="..." />
+                        <img class="card-img-top" src="../static/assets/teaterfår.jpeg" alt="..." />
                         <div class="card-body">
                             <h4 class="card-title">Love is Enough</h4>
                             <p class="showmore">Kærlighed kan dræbe og gøre blind, men kan det stadig overvinde alt?<span id="dots">...</span>
@@ -129,7 +130,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../src/assets/bettynansenteatret.jpeg" alt="..." />
+                        <img class="card-img-top" src="../static/assets/bettynansenteatret.jpeg" alt="..." />
                         <div class="card-body">
                             <h4 class="card-title">Stolthed og Fordom
                             </h4>
@@ -168,7 +169,7 @@
             <div class="row text-center">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../src/assets/folketeatret.jpeg" alt="..." />
+                        <img class="card-img-top" src="../static/assets/folketeatret.jpeg" alt="..." />
                         <div class="card-body">
                             <h4 class="card-title">The Robot Project</h4>
                             <p class="showmore"> Flyvende Grise gæster Folketeatret under CPH Stage
@@ -191,7 +192,7 @@
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../src/assets/nørrebroteater.jpeg" alt="..." />
+                        <img class="card-img-top" src="../static/assets/nørrebroteater.jpeg" alt="..." />
                         <div class="card-body">
                             <h4 class="card-title">En Folkefjende</h4>
                             <p class="showmore">ET UNDERHOLDENDE DRAMA OM SANDHED OG MAGT
@@ -214,7 +215,7 @@
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../src/assets/teaterfår.jpeg" alt="..." />
+                        <img class="card-img-top" src="../static/assets/teaterfår.jpeg" alt="..." />
                         <div class="card-body">
                             <h4 class="card-title">Love is Enough</h4>
                             <p class="showmore">Kærlighed kan dræbe og gøre blind, men kan det stadig overvinde alt?<span id="dots">...</span>
@@ -234,7 +235,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../src/assets/bettynansenteatret.jpeg" alt="..." />
+                        <img class="card-img-top" src="../static/assets/bettynansenteatret.jpeg" alt="..." />
                         <div class="card-body">
                             <h4 class="card-title">Stolthed og Fordom
                             </h4>
@@ -263,8 +264,6 @@
 
                     </div>
                 </div>
-            </div>
-        </div>
             </div>
         </div>
 
