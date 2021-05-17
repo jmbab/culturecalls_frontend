@@ -18,8 +18,8 @@
 
         <!-- Page Content-->
         <div class="container">
-            <nav class="navbar navbar-expand-md navbar-light bg-light " id="navbar" style="height: 10%">
-                <ul class="navbar-nav align-items-center m-auto container" style="font-size: 5.25vw;">
+            <nav class="navbar navbar-expand navbar-light bg-light " id="navbar" style="height: 10%">
+                <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
                     <li class="nav-item">
                         <!-- brug active for at highlighte den side man er inde på-->
@@ -30,7 +30,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="favorites.html">
-                            <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5.25vw" alt="">
+                            <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5vw" alt="">
                         </a>
                     </li>
                     <li class="nav-item">
@@ -283,9 +283,9 @@
 
         <script>
             function myFunction() {
-                var dots = document.getElementById("dots");
-                var moreText = document.getElementById("more");
-                var btnText = document.getElementById("myBtn");
+                const dots = document.getElementById("dots");
+                const moreText = document.getElementById("more");
+                const btnText = document.getElementById("myBtn");
 
                 if (dots.style.display === "none") {
                     dots.style.display = "inline";

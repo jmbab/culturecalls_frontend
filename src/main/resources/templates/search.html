@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Søg</title>
-    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../static/styles.css" rel="stylesheet" />
+    <link href="../static/styles.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-light bg-light " id="navbar" style="height: 10%">
-    <ul class="navbar-nav align-items-center m-auto container" style="font-size: 5.25vw;">
+<body onload="navBarLocation()">
+<nav class="navbar navbar-expand navbar-light bg-light " id="navbar" style="height: 10%">
+    <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
         <li class="nav-item">
             <!-- brug active for at highlighte den side man er inde på-->
@@ -23,7 +26,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="favorites.html">
-                <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5.25vw" alt="">
+                <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5vw" alt="">
             </a>
         </li>
         <li class="nav-item">
@@ -48,7 +51,13 @@
     </ul>
 
 </nav>
-søg side
+<div class="col-12">
+    <input type="text" name="searchbox" id="searchbox" class="filterinput form-control"
+           placeholder="Search recipe titles and tags...">
+</div>
+<div class="col-lg-3 col-md-6 mb-4" id="cards">
+
+</div>
 <!-- Footer-->
 <footer class="py-5 bg-dark">
     <div class="container"><p class="m-0 text-center text-white">Culture Calls</p></div>
@@ -57,7 +66,69 @@ søg side
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let list = [{
+        'name': 'The Robot Project',
+        'location': 'Folketeatret',
+        'price': '50'
+    },
+        {
+            'name': 'En Folkefjende',
+            'location': 'Nørrebro Teater',
+            'price': '75'
+        },
+        {
+            'name': 'Love is Enough',
+            'location': 'FÅR302',
+            'price': '60'
+        },
+        {
+            'name': 'Stolthed og Fordom',
+            'location': 'Nørrebro Teater',
+            'price': '45'
+        }]
+
+    list.forEach(item => {
+        const div = document.getElementById('cards')
+
+        div.innerHTML = div.innerHTML +
+            '<div class="card" data-role="card"><div class="card-body">' +
+            '<h4 class="card-title">' + item.name + '</h4>' +
+            '<p>' + item.price + ' ' + item.location + '</p>' +
+            '</div<div class="card-footer"><a class="btn btn-primary" href="payment.html/">Gå til bestilling</a></div>></div>'
+    })
+
+    console.log(list)
+
+
+    function navBarLocation() {
+        let query = window.matchMedia("(min-width: 1024px)");
+
+        if (query.matches) {
+            document.getElementById('navbar').classList.add('sticky-top');
+
+        } else {
+            document.getElementById('navbar').classList.add('fixed-bottom');
+        }
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        $("#searchbox").on("keyup", function () {
+            const value = $(this).val().toLowerCase();
+            $('div[data-role="card"]').filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+</script>
+
 </body>
 </html>

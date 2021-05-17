@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Title</title>
     <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../static/styles.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-light bg-light " id="navbar" style="height: 10%">
-    <ul class="navbar-nav align-items-center m-auto container" style="font-size: 5.25vw;">
+<body onload="navBarLocation()">
+<div>
+
+
+<nav class="navbar navbar-expand navbar-light bg-light " id="navbar" style="height: 10%">
+    <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
         <li class="nav-item">
             <!-- brug active for at highlighte den side man er inde på-->
@@ -23,7 +32,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="favorites.html">
-                <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5.25vw" alt="">
+                <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5vw" alt="">
             </a>
         </li>
         <li class="nav-item">
@@ -47,7 +56,7 @@
         </li>
     </ul>
 
-</nav>
+</nav></div>
 favorites side
 <!-- Footer-->
 <footer class="py-5 bg-dark">
@@ -59,5 +68,17 @@ favorites side
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function navBarLocation() {
+        let query = window.matchMedia("(min-width: 1024px)");
+
+        if (query.matches) {
+            document.getElementById('navbar').classList.add('sticky-top');
+
+        } else {
+            document.getElementById('navbar').classList.add('fixed-bottom');
+        }
+    }
+</script>
 </body>
 </html>

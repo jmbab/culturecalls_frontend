@@ -1,4 +1,4 @@
-package com.kea.culturecall.controller;
+package com.kea.culturecall_frontend.controller;
 
 
 import org.springframework.stereotype.Controller;
@@ -22,5 +22,10 @@ public class WebController {
     @GetMapping("/profile")
     public String profile() {
         return "profile";
+    }
+
+    @GetMapping("/payment")
+    public String payment() {
+        return "payment";
     }
 }
