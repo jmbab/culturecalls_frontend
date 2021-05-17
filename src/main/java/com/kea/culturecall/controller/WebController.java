@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-class MapController {
+public class WebController {
 
     @GetMapping("/search")
     public String index() {
