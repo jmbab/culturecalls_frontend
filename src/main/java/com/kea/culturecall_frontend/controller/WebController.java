@@ -14,6 +14,10 @@ public class WebController {
         return "search";
     }
 
+
+    @GetMapping("/about")
+    public String about() {return "about";    }
+
     @GetMapping("/favorites")
     public String favorites() {
         return "favorites";
