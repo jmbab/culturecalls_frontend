@@ -1,473 +1,547 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Culture Calls</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/styles.css" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Culture Calls</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../static/styles.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body onload="navBarLocation()">
-        <!-- Navigation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Page Content-->
-        <div class="container">
-            <nav class="navbar navbar-expand navbar-light bg-light " id="navbar" style="height: 10%">
-                <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
-                    <li class="nav-item">
-                        <!-- brug active for at highlighte den side man er inde på-->
-                        <a class="nav-link active" href="index.html">Udforsk</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="search.html">Søg</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="favorites.html">
-                            <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5vw" alt="">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html">Min profil</a>
-                    </li>
-                    <li>   <a class="nav-link" href="http://instagram.com/culturecallscph" class="instagram" target="_blank">
-                        <br> <i class="fa fa-instagram" style="height: 5vw" alt="" ></i>
-                    </a>    </li>
+</head>
+<body style="font-family: 'Calibri Light',serif; background-color: #f5fbe2" onload="widthCheck();">
 
-                    <!-- dropdown -->
-                    <li class="nav-item dropdown" hidden>
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            More
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">test</a></li>
-                            <li><a class="dropdown-item" href="#">test2</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">test3</a></li>
+<!-- Navigation-->
 
-                        </ul>
+<!-- mobile nav -->
+<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%">
+
+        <a class="nav-link instagram" href="https://instagram.com/culturecallscph" target="_blank">
+            <br> <i class="fa fa-instagram" style="height: 5vw"></i>
+        </a>
+
+    <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
+
+        <li class="nav-item">
+            <!-- brug active for at highlighte den side man er inde på-->
+            <a class="nav-link" href="index.html">udforsk</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="search.html">søg</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="favorites.html">
+                <img src="../static/assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="profile.html">min profil</a>
+        </li>
+
+        <!-- dropdown -->
+        <li class="nav-item dropdown" hidden>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">test</a></li>
+                <li><a class="dropdown-item" href="#">test2</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">test3</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</nav>
+
+<!-- pc navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+        <ul class="navbar-nav mr-auto">
+            <li class="container-fluid">
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Udforsk</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search.html">Søg</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="favorites.html">Favoritter</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mx-auto order-0">
+        <a class="navbar-brand" href="index.html">
+            <img src="../static/assets/culture-calls-tra.png" alt="" style="height: 5vw">
+        </a>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" style="font-size: larger">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown mr-auto">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    <img src="../static/assets/dropdown.png" style="height: 25px; color: #707071">
+                </a>
+                <ul class="dropdown-menu float-right" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Log ind</a></li>
+                    <li><a class="dropdown-item" href="#">Opret konto</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
                     </li>
+                    <li><a class="dropdown-item" href="#">Om os</a></li>
                 </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-            </nav>
-            <p><div class="container"><p class="m-0 text-center text-black-50"><a href="about.html" style="text-decoration: none; color: black">Læs mere om Culture Calls</a>
-            <br>Send mail : <a style=" text-decoration: none;color: black" href = "mailto: culturecallscph@gmail.com">culturecallscph@gmail.com</a></p></div>
-            </p>
-            <!-- Jumbotron Header-->
-            <header class="jumbotron my-4">
-
-
-
-            </header>
-
-
-            <!-- Page Features-->
-        <div class="row text-center">
-          <div class="col-lg-3 col-md-6 mb-4">
-           <div class="card h-100">
-           <img class="card-img-top" src="../static/assets/backtonofuture.jpg" alt="..." />
-            <div class="card-body">
-                 <h4 class="card-title">1984 - Back to No Future</h4>
-                <h6>30/5 - 2021 &nbsp;&nbsp;  Pris: 55 DKK</h6>
-                <p class="showmore"> Året er 1984, og den kolde krig er i fuld sving. Amerikanerne har opfundet et nyt, magtfuldt våben:
-                    musikvideoen. Der bliver spenderet millioner på at beame billeder af dekadence,
-                    overflod, magt, sex og transformation ind i verdens fjernsyn.<span id="dots">...</span><span class="more">I takt med at performerne husker sig selv og rekonstruerer
+<!-- Page Content-->
+<div class="container" style="padding-top: 40px">
+    <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="../static/assets/backtonofuture.jpg" alt="..."/>
+                <div class="card-body">
+                    <h4 class="card-title">1984 - Back to No Future</h4>
+                    <h6>30/5 - 2021 &nbsp;&nbsp; Pris: 55 DKK</h6>
+                    <p class="showmore"> Året er 1984, og den kolde krig er i fuld sving. Amerikanerne har opfundet et
+                        nyt, magtfuldt våben:
+                        musikvideoen. Der bliver spenderet millioner på at beame billeder af dekadence,
+                        overflod, magt, sex og transformation ind i verdens fjernsyn.<span id="dots">...</span><span
+                                class="more">I takt med at performerne husker sig selv og rekonstruerer
                     datidens medie fantasier, begynder de at afdække, hvad der ellers kan være skrevet ind i programmeringskoden bag den farverige verden af kommerciel pop.
                     Var teenagerne herrer over deres egne kroppe,
                     deres egne skæbner og deres egne muligheder for at kontrollere og forme ting? Eller var de færdiglavede skabeloner,
                     skabt til at følge en større plan? Kan de reprogrammere deres egen historie? Eller i det mindste se på den med andre øjne? Hvem eller hvad mangler i billedet?</span>
 
-                <a>Vis mere</a>
-                </p>
+                        <a>Vis mere</a>
+                    </p>
 
+                </div>
+                <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
             </div>
-             <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
-              </div>
-              </div>
+        </div>
 
 
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="../static/assets/nørrebroteater.jpeg" alt="..."/>
+                <div class="card-body">
+                    <h4 class="card-title">En Folkefjende</h4>
+                    <h6>3/6 - 2021 &nbsp;&nbsp; Pris: 65 DKK</h6>
+                    <p class="showmore">ET UNDERHOLDENDE DRAMA OM SANDHED OG MAGT
+                        Et underholdende og aktuelt drama med Søren Pilmark i front som lægen, der er villig til at ofre
+                        alt for sandheden.<span id="dots">...</span>
+                        <span class="more">I år er vi stolte over at kunne præsentere nogle af de bedste unge musikere på Danmarks klassiske scene til Matiné- og Aftenkoncerter i et spændende og krævende repertoire, der spænder over flere århundreder. Derudover har vi skabt konceptet “Ud af boksen”, hvor vi inviterer dygtige rytmiske ensembler på scenen og ikke mindst “Drømmefanger”-koncerterne, hvor scenekanten udviskes i de sene aftentimer, og publikum kommer helt tæt på musikken.</span>
 
 
-            <div class="col-lg-3 col-md-6 mb-4">
-             <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/nørrebroteater.jpeg" alt="..." />
-                 <div class="card-body">
-                     <h4 class="card-title">En Folkefjende</h4>
-                     <h6>3/6 - 2021  &nbsp;&nbsp;  Pris: 65 DKK</h6>
-                     <p class="showmore">ET UNDERHOLDENDE DRAMA OM SANDHED OG MAGT
-                         Et underholdende og aktuelt drama med Søren Pilmark i front som lægen, der er villig til at ofre alt for sandheden.<span id="dots">...</span>
-                         <span class="more">I år er vi stolte over at kunne præsentere nogle af de bedste unge musikere på Danmarks klassiske scene til Matiné- og Aftenkoncerter i et spændende og krævende repertoire, der spænder over flere århundreder. Derudover har vi skabt konceptet “Ud af boksen”, hvor vi inviterer dygtige rytmiske ensembler på scenen og ikke mindst “Drømmefanger”-koncerterne, hvor scenekanten udviskes i de sene aftentimer, og publikum kommer helt tæt på musikken.</span>
+                        <a>Vis mere</a>
+                    </p>
+                </div>
+                <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+            </div>
+        </div>
 
 
-                         <a>Vis mere</a>
-                     </p>
-                 </div>
-                 <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
-             </div>
-              </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="../static/assets/somenhjort.jpg" alt="..."/>
+                <div class="card-body">
+                    <h4 class="card-title">JEG STÅR I KVIKSAND OG BRØLER SOM EN HJORT</h4>
+                    <h6>1/6 - 2021 &nbsp;&nbsp; Pris: 65 DKK</h6>
+                    <p class="showmore">JEG STÅR I KVIKSAND OG BRØLER SOM EN HJORT er en verbal knytnæve af en
+                        musikforestilling.
+                        En ung kvindes fortælling om desperation, ensomhed og glubende hævntørst. Det er råt. Det er
+                        hudløst ærligt.
+                        Det er ubehageligt morsomt.<span id="dots">...</span>
 
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/somenhjort.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">JEG STÅR I KVIKSAND OG BRØLER SOM EN HJORT</h4>
-                            <h6>1/6 - 2021 &nbsp;&nbsp;  Pris: 65 DKK</h6>
-                            <p class="showmore">JEG STÅR I KVIKSAND OG BRØLER SOM EN HJORT er en verbal knytnæve af en musikforestilling.
-                                En ung kvindes fortælling om desperation, ensomhed og glubende hævntørst. Det er råt. Det er hudløst ærligt.
-                                Det er ubehageligt morsomt.<span id="dots">...</span>
-
-                                <span class="more">“Jeg er et stykke franskbrød, der ligger ude i regnen,” fortæller hun.
+                        <span class="more">“Jeg er et stykke franskbrød, der ligger ude i regnen,” fortæller hun.
                                     Lyrisk poesi møder kold dansk hverdag, når en ung kvinde tager os med på en tour de force
                                     gennem en svimlende forelskelse. Helt derud, hvor hun pludselig finder sig selv i en ekskærestes
                                     lejlighed i færd med at tvære indholdet i hans køleskab ud over køkkenet. Kapers er vidunderlige som konfetti.
                                     Skete det i virkeligheden, eller løber hendes fantasi nu af med hende igen?</span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
-                    </div>
+                        <a>Vis mere</a>
+                    </p>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/festivalandfriends.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Festival & Friends
-                            </h4>
-                            <h6>12.-14. juli 2021  &nbsp;&nbsp;  Pris: 130 DKK</h6>
-                            <p class="showmore">Festival & Friends er en lille musikfestival, der afholdes over tre sommerdage på Nørrebro i København. Til koncerterne kan man opleve nogle af landets dygtigste unge musikere indenfor klassisk og jazz i en intim og afslappet atmosfære..<span id="dots">...</span>
+                <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="../static/assets/festivalandfriends.jpg" alt="..."/>
+                <div class="card-body">
+                    <h4 class="card-title">Festival & Friends
+                    </h4>
+                    <h6>12.-14. juli 2021 &nbsp;&nbsp; Pris: 130 DKK</h6>
+                    <p class="showmore">Festival & Friends er en lille musikfestival, der afholdes over tre sommerdage
+                        på Nørrebro i København. Til koncerterne kan man opleve nogle af landets dygtigste unge musikere
+                        indenfor klassisk og jazz i en intim og afslappet atmosfære..<span id="dots">...</span>
 
-                                <span class="more">I år er vi stolte over at kunne præsentere nogle af de bedste unge musikere på Danmarks klassiske scene
+                        <span class="more">I år er vi stolte over at kunne præsentere nogle af de bedste unge musikere på Danmarks klassiske scene
                                     til Matiné- og Aftenkoncerter i et spændende og krævende repertoire, der spænder over flere århundreder. Derudover har vi
                                     skabt konceptet “Ud af boksen”, hvor vi inviterer dygtige rytmiske ensembler på scenen og ikke mindst “Drømmefanger”-koncerterne, hvor scenekanten udviskes i de sene aftentimer,
                                     og publikum kommer helt tæt på musikken.
                                     </span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
-
-                    </div>
+                        <a>Vis mere</a>
+                    </p>
                 </div>
+                <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+
             </div>
         </div>
-        <!-- Page Content-->
-        <div class="container">
-
-
-            <!-- Page Features-->
-            <div class="row text-center">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/jytte.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Jytte fra marketing er desværre gået for i dag</h4>
-                            <h6>7/6 - 2021 &nbsp;&nbsp;Pris: 65 DKK</h6>
-                            <p class="showmore"> Morten Münster har taget Danmark med storm med sin bog om Jytte og adfærdsdesign. Nu bliver bogen til et poetisk og tankevækkende
-                                komedieshow med genkendelige og urkomiske situationer fra hverdagen,
-                                både dem derhjemme og på arbejdspladsen.<span id="dots">...</span><span class="more">Vi spiser kage, selvom vi er på slankekur. Vi står i kø til
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/jytte.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Jytte fra marketing er desværre gået for i dag</h4>
+                        <h6>7/6 - 2021 &nbsp;&nbsp;Pris: 65 DKK</h6>
+                        <p class="showmore"> Morten Münster har taget Danmark med storm med sin bog om Jytte og
+                            adfærdsdesign. Nu bliver bogen til et poetisk og tankevækkende
+                            komedieshow med genkendelige og urkomiske situationer fra hverdagen,
+                            både dem derhjemme og på arbejdspladsen.<span id="dots">...</span><span class="more">Vi spiser kage, selvom vi er på slankekur. Vi står i kø til
                                 Black Friday, men betaler med glæde vores ubrugte fitnessabonnement. Vi er forandringsparate til fællesmøder, workshops, strategidage og
                                 PowerPoint-præsentationer, men glemmer alt om missioner og visioner, så snart det er hverdag igen.
                                 JYTTE FRA MARKETING ER DESVÆRRE GÅET FOR I DAG tager fat i alle de udfordringer, der opstår, når det uperfekte menneske forventes at have den perfekte adfærd.
                                 Hvorfor er det så svært for os at følge gode argumenter, planer og sund fornuft? Hvorfor falder vi i gang på gang? Og hvad skal der til for at skabe forandring i den virkelige verden?
 </span>
 
-                                <a>Vis mere</a>
-                            </p>
+                            <a>Vis mere</a>
+                        </p>
 
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
+            </div>
 
 
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/stalin.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Stalins død</h4>
+                        <h6>7/6 - 2021 &nbsp;&nbsp; Pris: 65 DKK</h6>
+                        <p class="showmore">Med STALINS DØD tager Nørrebro Teater tråden op fra DIKTATOREN og viser
+                            underholdende teater om, hvad der sker, når sandheden bøjes, og fakta bliver en
+                            ligegyldighed.<span id="dots">...</span>
+                            <span class="more">Josef Stalin dør, og den attraktive post som Sovjetunionens landsfader er ledig. Men hvem skal have magten? Svaret findes i kommunistpartiets øverste top, hvor alle dog har mere travlt med sig selv end med landets ve og vel. Et hæsblæsende magtspil med de mest udspekulerede bagholdsangreb begynder. Reglerne er enkle: Der er ingen!</span>
 
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/stalin.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Stalins død</h4>
-                            <h6>7/6 - 2021  &nbsp;&nbsp;  Pris: 65 DKK</h6>
-                            <p class="showmore">Med STALINS DØD tager Nørrebro Teater tråden op fra DIKTATOREN og viser underholdende teater om, hvad der sker, når sandheden bøjes, og fakta bliver en ligegyldighed.<span id="dots">...</span>
-                                <span class="more">Josef Stalin dør, og den attraktive post som Sovjetunionens landsfader er ledig. Men hvem skal have magten? Svaret findes i kommunistpartiets øverste top, hvor alle dog har mere travlt med sig selv end med landets ve og vel. Et hæsblæsende magtspil med de mest udspekulerede bagholdsangreb begynder. Reglerne er enkle: Der er ingen!</span>
-
-
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
+            </div>
 
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/allegodeting.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Alle gode ting</h4>
-                            <h6>4/6 - 2021  &nbsp;&nbsp;  Pris: 55 DKK</h6>
-                            <p class="showmore">Den anmelderroste ALLE GODE TING er en humoristisk forestilling om noget så umorsomt som depression og selvmord. Oplev skuespiller Frank Thiel, når han bogstaveligt talt sammen med publikum gør hver aften til en enestående oplevelse.<span id="dots">...</span>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/allegodeting.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Alle gode ting</h4>
+                        <h6>4/6 - 2021 &nbsp;&nbsp; Pris: 55 DKK</h6>
+                        <p class="showmore">Den anmelderroste ALLE GODE TING er en humoristisk forestilling om noget så
+                            umorsomt som depression og selvmord. Oplev skuespiller Frank Thiel, når han bogstaveligt talt
+                            sammen med publikum gør hver aften til en enestående oplevelse.<span id="dots">...</span>
 
-                                <span class="more">Is, at forelske sig, hængekøjer, lugten af gamle bøger, fuglesang, mig! Sådan lyder nogle af tingene på den liste, en ung dreng begynder at lave til sin mor. Listen over alle gode ting. Han efterlader sedlen på hendes hovedpude, efter hun endnu en gang har været indlagt med en depression. Som voksen fortæller han os, hvordan listen har fået sit eget omfattende liv.</span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <span class="more">Is, at forelske sig, hængekøjer, lugten af gamle bøger, fuglesang, mig! Sådan lyder nogle af tingene på den liste, en ung dreng begynder at lave til sin mor. Listen over alle gode ting. Han efterlader sedlen på hendes hovedpude, efter hun endnu en gang har været indlagt med en depression. Som voksen fortæller han os, hvordan listen har fået sit eget omfattende liv.</span>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/sombrødre.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Som brødre</h4>
-                            <h6>27/5 - 2021 &nbsp;&nbsp;  Pris: 80 DKK</h6>
-                            <p class="showmore">SOM BRØDRE er en nyskrevet poetisk forestilling om to brødres kamp for at finde fodfæste i en splittet tilværelse, baseret på en række digte af Alexander Mayah Larsen..<span id="dots">...</span>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/sombrødre.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Som brødre</h4>
+                        <h6>27/5 - 2021 &nbsp;&nbsp; Pris: 80 DKK</h6>
+                        <p class="showmore">SOM BRØDRE er en nyskrevet poetisk forestilling om to brødres kamp for at finde
+                            fodfæste i en splittet tilværelse, baseret på en række digte af Alexander Mayah Larsen..<span
+                                    id="dots">...</span>
 
-                                <span class="more">Mor, baba, storebror og lillebror. En lykkelig familie flytter til forstaden og inviterer vejens beboere på hjemmelavet risgryde og hygge.
+                            <span class="more">Mor, baba, storebror og lillebror. En lykkelig familie flytter til forstaden og inviterer vejens beboere på hjemmelavet risgryde og hygge.
 Udadtil stråler familielivet af varme og lykke, men på den anden side af de nedrullede persienner eksisterer en anden verden, hvor baba er konge, og forsøger at kontrollere alt. Når kongen er utilfreds med sine sønner, gentager han med jævne mellemrum, at det var en fejl de blev født. De to brødre driver længere og længere væk fra hinanden mod hver deres fællesskab, som giver dem det de mangler i livet – kærlighed og anerkendelse.
 </span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/dufindermig.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">DU FINDER MIG NEDERST I BUNKEN</h4>
-                            <h6>14/6 - 2021  &nbsp;&nbsp;  Pris: 40 DKK</h6>
-                            <p class="showmore">DU FINDER MIG NEDERST I BUNKEN er en eksplosiv forestilling om tabte relationer og
-                                gemte genstande; et stykke sejldug fra en mystisk bådebygger, en sårskorpe fra et
-                                forældet forhold og en sav, der bliver symbol på en ung kvindes frigørelse.<span id="dots">...</span>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/dufindermig.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">DU FINDER MIG NEDERST I BUNKEN</h4>
+                        <h6>14/6 - 2021 &nbsp;&nbsp; Pris: 40 DKK</h6>
+                        <p class="showmore">DU FINDER MIG NEDERST I BUNKEN er en eksplosiv forestilling om tabte relationer
+                            og
+                            gemte genstande; et stykke sejldug fra en mystisk bådebygger, en sårskorpe fra et
+                            forældet forhold og en sav, der bliver symbol på en ung kvindes frigørelse.<span
+                                    id="dots">...</span>
 
-                                <span class="more">I et absurd og æstetisk univers skaber Teater Mikado og dramatiker Regina Rex ny dramatik baseret på virkelige historier, der nænsomt bindes sammen i skarpe dialoger og genkendelige scenarier fra hverdagens knuste hjerter.
+                            <span class="more">I et absurd og æstetisk univers skaber Teater Mikado og dramatiker Regina Rex ny dramatik baseret på virkelige historier, der nænsomt bindes sammen i skarpe dialoger og genkendelige scenarier fra hverdagens knuste hjerter.
 Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zagreb og bliver forvandlet til en musikalsk helaftensforestilling om de genstande, der står tilbage fra ødelagte relationer.
 </span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
+            </div>
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/generation911.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Generation 9/11</h4>
-                            <h6>12/6 - 2021  &nbsp;&nbsp;  Pris: 55 DKK</h6>
-                            <p class="showmore">Danske Esther står i billedkunstlokalet på sin amerikanske skole i 2001, da allekaldet lyder. Hun er 11 og flyttet til New York året forinden. I kantinen bliver alle mellemskolebørnene bedt om at dele sig i to grupper: dem der har forældre, der arbejder i tvillingetårnene, og dem der ikke har. Esther føler sig udenfor. Alle hendes venner er i en anden gruppe end hende. Hendes forældre arbejder nemlig hjemmefra<span id="dots">...</span>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/generation911.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Generation 9/11</h4>
+                        <h6>12/6 - 2021 &nbsp;&nbsp; Pris: 55 DKK</h6>
+                        <p class="showmore">Danske Esther står i billedkunstlokalet på sin amerikanske skole i 2001, da
+                            allekaldet lyder. Hun er 11 og flyttet til New York året forinden. I kantinen bliver alle
+                            mellemskolebørnene bedt om at dele sig i to grupper: dem der har forældre, der arbejder i
+                            tvillingetårnene, og dem der ikke har. Esther føler sig udenfor. Alle hendes venner er i en
+                            anden gruppe end hende. Hendes forældre arbejder nemlig hjemmefra<span id="dots">...</span>
 
-                                <span class="more">GENERATION 9/11 handler om at få sit første kys efter 11. september. Om at føle sig fremmed i det land,
+                            <span class="more">GENERATION 9/11 handler om at få sit første kys efter 11. september. Om at føle sig fremmed i det land,
                                     man bor i, og om at få grineflip fordi Williams far pludselig går med pistol. Men den handler også om
                                     en ung arkitekt ved navn Minoru Yamasaki, der får til opgave at bygge et monument for verdensfreden midt i New York City. Året er 1973, og de to bygninger kalder de for World Trade Center: En repræsentation af menneskets tro på menneskeheden, som Minoru siger ved åbningsceremonien. Fremme i 2001 oplever Esther og hendes venner, at der begynder at gro to tårne i maverne på dem.
                                     To tårne, som bliver ved med at vokse.</span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/ANTIGONE-2030.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Antigone 2030</h4>
-                            <h6>4/6 - 2021  &nbsp;&nbsp;  Pris: 60 DKK</h6>
-                            <p class="showmore">Med Sofokles’ 2500 år gamle tragedie som forlæg tager Teatergrad publikum med ind i en nær fremtid,
-                                hvor intet er som det plejer.<span id="dots">...</span>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/ANTIGONE-2030.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Antigone 2030</h4>
+                        <h6>4/6 - 2021 &nbsp;&nbsp; Pris: 60 DKK</h6>
+                        <p class="showmore">Med Sofokles’ 2500 år gamle tragedie som forlæg tager Teatergrad publikum med
+                            ind i en nær fremtid,
+                            hvor intet er som det plejer.<span id="dots">...</span>
 
-                                <span class="more">På anklagebænken i årets vigtigste retssag sidder Antigone, anklaget for at gå imod sin kommende
+                            <span class="more">På anklagebænken i årets vigtigste retssag sidder Antigone, anklaget for at gå imod sin kommende
                                     svigerfar Kong Kreons jordiske love. Alle hendes handlinger har været affødt af hendes stærke moralske kodeks. Men hvad er rigtigt,
                                     og hvad er forkert, og kan Antigone forvente en retfærdig dom for sin brøde?
                                     Vi lægger ansvaret for Antigones skæbne i jeres hænder. Retssagen føres med kong Kreon som den dømmende myndighed flankeret af
                                     publikum som nævninge.
                                     Hendes skæbne er først forseglet i det øjeblik, retssagen er ovre og dommen fældet. Intet er givet på forhånd.
 </span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/valkyrien.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Valkyriens kamp</h4>
-                            <h6>27/6 - 2021  &nbsp;&nbsp;  Pris: 80 DKK</h6>
-                            <p class="showmore">— ny dansk musikforestilling om Thit Jensen
-                                Lad os tage dig med ind i Thit Jensens stridbare verden. Her smelter et tumultarisk
-                                privatliv og en visionær kønspolitisk kamp sammen i et kompromisløst kunstnerisk virke.<span id="dots">...</span>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/valkyrien.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Valkyriens kamp</h4>
+                        <h6>27/6 - 2021 &nbsp;&nbsp; Pris: 80 DKK</h6>
+                        <p class="showmore">— ny dansk musikforestilling om Thit Jensen
+                            Lad os tage dig med ind i Thit Jensens stridbare verden. Her smelter et tumultarisk
+                            privatliv og en visionær kønspolitisk kamp sammen i et kompromisløst kunstnerisk virke.<span
+                                    id="dots">...</span>
 
-                                <span class="more">Fortællingen om Thit Jensen er fortællingen om den moderne kvindes frigørelse i politisk, kunstnerisk og seksuel forstand.
+                            <span class="more">Fortællingen om Thit Jensen er fortællingen om den moderne kvindes frigørelse i politisk, kunstnerisk og seksuel forstand.
                                     Om forfatteren, dramatikeren, debattøren og foredragsholderen
                                     der sætter hele sit liv ind på at skabe ligestillede vilkår mellem kønnene.</span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/rigmor.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Rigmor</h4>
-                            <h6>2/6 - 2021  &nbsp;&nbsp;  Pris: 75 DKK</h6>
-                            <p >Rigmor sætter støj til Strunge-inspireret ungdomspoesi på Hotel Cecil
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/rigmor.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Rigmor</h4>
+                        <h6>2/6 - 2021 &nbsp;&nbsp; Pris: 75 DKK</h6>
+                        <p>Rigmor sætter støj til Strunge-inspireret ungdomspoesi på Hotel Cecil
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/digteoglyd.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Digte & Lyd vol. 7 – Hvilken verden venter os?</h4>
-                            <h6>30/5 - 2021  &nbsp;&nbsp;  Pris: 85 DKK</h6>
-                            <p class="showmore">Fælles for de udvalgte, aktuelle forfattere og musikere til Digte & Lyd er deres særlige evne til at
-                                spejle samfundet med sanselige tekster. <span id="dots">...</span>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/digteoglyd.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Digte & Lyd vol. 7 – Hvilken verden venter os?</h4>
+                        <h6>30/5 - 2021 &nbsp;&nbsp; Pris: 85 DKK</h6>
+                        <p class="showmore">Fælles for de udvalgte, aktuelle forfattere og musikere til Digte & Lyd er deres
+                            særlige evne til at
+                            spejle samfundet med sanselige tekster. <span id="dots">...</span>
 
-                                <span class="more">Aftenen vil byde på både rørende og oprørende refleksioner af vores samtid, der forhåbentlig åbner op for både nye perspektiver og
+                            <span class="more">Aftenen vil byde på både rørende og oprørende refleksioner af vores samtid, der forhåbentlig åbner op for både nye perspektiver og
                                 fremkalder ord-gåsehuden.</span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/cphsummerdance.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Copenhagen Summer Dance</h4>
-                            <h6>22/6 - 2021  &nbsp;&nbsp;  Pris: Gratis</h6>
-                            <p class="showmore">Hvordan skaber man stor kunst? Et ultimativt og storslået show, der får publikum til at dåne af ren og skær lykkerus? Og hvad med alt det, der bliver sorteret fra i processen? Disse spørgsmål bliver taget under kærlig behandling af koreografen Roy Assaf, som er en mester i at forene det vanvittige med det alvorlige. I forestillingen møder vi en række vidt forskellige skøre skæbner, og snart tegner der sig et potpourri af små satiriske nedslag inspireret af kunstnerens iver efter at skabe det ”perfekte show”.  <span id="dots">...</span>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/cphsummerdance.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Copenhagen Summer Dance</h4>
+                        <h6>22/6 - 2021 &nbsp;&nbsp; Pris: Gratis</h6>
+                        <p class="showmore">Hvordan skaber man stor kunst? Et ultimativt og storslået show, der får publikum
+                            til at dåne af ren og skær lykkerus? Og hvad med alt det, der bliver sorteret fra i processen?
+                            Disse spørgsmål bliver taget under kærlig behandling af koreografen Roy Assaf, som er en mester
+                            i at forene det vanvittige med det alvorlige. I forestillingen møder vi en række vidt
+                            forskellige skøre skæbner, og snart tegner der sig et potpourri af små satiriske nedslag
+                            inspireret af kunstnerens iver efter at skabe det ”perfekte show”. <span id="dots">...</span>
 
-                                <span class="more">Årets program byder blandt andet på et nyt danseværk af vores kunstnerisk leder og koreograf Pontus Lidberg med livemusik af den cool Københavnerduo Den Sorte Skole.</span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <span class="more">Årets program byder blandt andet på et nyt danseværk af vores kunstnerisk leder og koreograf Pontus Lidberg med livemusik af den cool Københavnerduo Den Sorte Skole.</span>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/twolions.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Two Lions and a Castle</h4>
-                            <h6>27/6 - 2021  &nbsp;&nbsp;  Pris: 85 DKK</h6>
-                            <p class="showmore">Hvordan skaber man stor kunst? Et ultimativt og storslået show, der får publikum til at dåne af ren og skær lykkerus?
-                                Og hvad med alt det, der bliver sorteret fra i processen? Disse spørgsmål bliver taget under kærlig behandling
-                                af koreografen Roy Assaf, som er en mester i at forene det vanvittige med det alvorlige.
-                                 <span id="dots">...</span>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/twolions.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Two Lions and a Castle</h4>
+                        <h6>27/6 - 2021 &nbsp;&nbsp; Pris: 85 DKK</h6>
+                        <p class="showmore">Hvordan skaber man stor kunst? Et ultimativt og storslået show, der får publikum
+                            til at dåne af ren og skær lykkerus?
+                            Og hvad med alt det, der bliver sorteret fra i processen? Disse spørgsmål bliver taget under
+                            kærlig behandling
+                            af koreografen Roy Assaf, som er en mester i at forene det vanvittige med det alvorlige.
+                            <span id="dots">...</span>
 
-                                <span class="more">I forestillingen møder vi en række vidt forskellige skøre skæbner, og snart tegner der sig et potpourri
+                            <span class="more">I forestillingen møder vi en række vidt forskellige skøre skæbner, og snart tegner der sig et potpourri
                                 af små satiriske nedslag inspireret af kunstnerens iver efter at skabe det ”perfekte show”.</span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/blaueblume.jpg" alt="..." />
-                        <div class="card-body">
-                            <h4 class="card-title">Blau Blume</h4>
-                            <h6>13/6 - 2021  &nbsp;&nbsp;  Pris: 105 DKK</h6>
-                            <p >Efter at have udsolgt deres første koncert på Hotel Cecil den 14. maj, spiller Blaue Blume nu ekstrakoncert
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/blaueblume.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">Blau Blume</h4>
+                        <h6>13/6 - 2021 &nbsp;&nbsp; Pris: 105 DKK</h6>
+                        <p>Efter at have udsolgt deres første koncert på Hotel Cecil den 14. maj, spiller Blaue Blume nu
+                            ekstrakoncert
 
-                            </p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
                 </div>
+            </div>
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="../static/assets/mydeerhunter.jpg" alt="..." />
-                        <div class="card-body">
-                  <h4 class="card-title">My Deer Hunter</h4>
-                            <h6>17/5 - 2021  &nbsp;&nbsp;  Pris: 75 DKK</h6>
-                <p class="showmore">Fire krigsveteraner kæmper deres helt egen kamp for at vende tilbage til samfundet igen. En kamp, hvor de udfordrer deres PTSD,
-                    deres skam og manglende selvtillid på den mest ultimative og udstillende måde.<span id="dots">...</span>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/assets/mydeerhunter.jpg" alt="..."/>
+                    <div class="card-body">
+                        <h4 class="card-title">My Deer Hunter</h4>
+                        <h6>17/5 - 2021 &nbsp;&nbsp; Pris: 75 DKK</h6>
+                        <p class="showmore">Fire krigsveteraner kæmper deres helt egen kamp for at vende tilbage til
+                            samfundet igen. En kamp, hvor de udfordrer deres PTSD,
+                            deres skam og manglende selvtillid på den mest ultimative og udstillende måde.<span id="dots">...</span>
 
-                <span class="more">Med den filmiske klassiker Deer Hunter som guide lader Fix&Foxy fire krigsveteraner
+                            <span class="more">Med den filmiske klassiker Deer Hunter som guide lader Fix&Foxy fire krigsveteraner
                     møde sig selv og dem de var engang. Her vender de tilbage til de livsforandrende øjeblikke, de har gennemlevet,
                     i forsøget på at genskabe deres liv. Det liv de havde, før det blev knust.</span>
-                                <a>Vis mere</a>
-                            </p>
-                        </div>
-                        <div class="card-footer" ><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
-
+                            <a>Vis mere</a>
+                        </p>
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a></div>
+
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 
-        <!-- Footer-->
-        <div id="footer" class="py-5 bg-dark"></div>
-
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+<!-- Footer-->
+<footer class="py-5 navbar-bg">
+    <p class="m-0 text-center text-black-50">
+        <a href="about.html" style="text-decoration: none; color: black">Læs mere om Culture Calls</a><br>
+        Send mail : <a style=" text-decoration: none;color: black" href="mailto: culturecallscph@gmail.com">culturecallscph@gmail.com</a>
+    </p>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
 
-        <script>
-            function myFunction() {
-                const dots = document.getElementById("dots");
-                const moreText = document.getElementById("more");
-                const btnText = document.getElementById("myBtn");
+<script>
+    function myFunction() {
+        const dots = document.getElementById("dots");
+        const moreText = document.getElementById("more");
+        const btnText = document.getElementById("myBtn");
 
-                if (dots.style.display === "none") {
-                    dots.style.display = "inline";
-                    btnText.innerHTML = "Vis mere";
-                    moreText.style.display = "none";
-                } else {
-                    dots.style.display = "none";
-                    btnText.innerHTML = "Vis mindre";
-                    moreText.style.display = "inline";
-                }
-            }
-            document.querySelectorAll(".showmore").forEach(function (p) {
-                p.querySelector("a").addEventListener("click", function () {
-                    p.classList.toggle("show");
-                    this.textContent = p.classList.contains("show") ? "Vis mindre" : "Vis mere";
-                });
-            });
-            
-            function navBarLocation() {
-        let query = window.matchMedia("(min-width: 1024px)");
-
-        if (query.matches) {
-            document.getElementById('navbar').classList.add('sticky-top');
-
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Vis mere";
+            moreText.style.display = "none";
         } else {
-            document.getElementById('navbar').classList.add('fixed-bottom');
+            dots.style.display = "none";
+            btnText.innerHTML = "Vis mindre";
+            moreText.style.display = "inline";
         }
     }
 
-        </script>
-    </body>
+    document.querySelectorAll(".showmore").forEach(function (p) {
+        p.querySelector("a").addEventListener("click", function () {
+            p.classList.toggle("show");
+            this.textContent = p.classList.contains("show") ? "Vis mindre" : "Vis mere";
+        });
+    });
+
+    function widthCheck() {
+        let query = window.matchMedia("(min-width: 1024px)");
+        const navbar = document.getElementById('navbar');
+        const navbarpc = document.getElementById('navbarpc');
+        const about = document.getElementById('about')
+        const aboutpc = document.getElementById('aboutpc')
+
+        if (query.matches) {
+            navbar.classList.add('sticky-top');
+            navbar.style.fontSize
+            navbar.hidden = true
+            about.hidden = true
+
+        } else {
+            navbar.classList.add('fixed-bottom');
+            navbarpc.hidden = true
+            aboutpc.hidden = true
+
+        }
+    }
+</script>
+</body>
 </html>
