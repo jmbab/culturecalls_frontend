@@ -48,7 +48,22 @@
   #footer {display: none; }
 
 }
+/*  list events */
 
+.card__content {
+  flex: 1 1 auto;
+}
+.media-item {
+  display: flex;
+}
+.card-job-find-list__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
 
 .btn-custom {
   background-color: hsl(182, 100%, 40%) !important;
