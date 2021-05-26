@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Calibri Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Calibri Light'), url('https://fonts.cdnfonts.com/s/14017/calibril.woff') format('woff');
+}
+
 /*!
 * Start Bootstrap - Heroic Features v4.3.0 (https://startbootstrap.com/template/heroic-features)
 * Copyright 2013-2021 Start Bootstrap
