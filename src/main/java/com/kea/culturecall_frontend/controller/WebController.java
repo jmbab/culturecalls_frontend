@@ -14,7 +14,6 @@ public class WebController {
         return "search";
     }
 
-
     @GetMapping("/about")
     public String about() {return "about";    }
 
