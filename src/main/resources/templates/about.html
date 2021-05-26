@@ -15,48 +15,95 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body onload="navBarLocation()">
+<body style="font-family: 'Calibri Light',serif; background-color: #f5fbe2" onload="widthCheck();">
+
 <!-- Navigation-->
 
-<!-- Page Content-->
-<div class="container">
-  <nav class="navbar navbar-expand navbar-light bg-light " id="navbar" style="height: 10%">
-    <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
+<!-- mobile nav -->
+<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%">
 
+  <a class="nav-link instagram" href="https://instagram.com/culturecallscph" target="_blank">
+    <br> <i class="fa fa-instagram" style="height: 5vw"></i>
+  </a>
+
+  <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
+
+    <li class="nav-item">
+      <!-- brug active for at highlighte den side man er inde på-->
+      <a class="nav-link" href="index.html">udforsk</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="search.html">søg</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="favorites.html">
+        <img src="../static/assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="profile.html">min profil</a>
+    </li>
+
+    <!-- dropdown -->
+    <li class="nav-item dropdown" hidden>
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+         data-bs-toggle="dropdown" aria-expanded="false">
+        More
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">test</a></li>
+        <li><a class="dropdown-item" href="#">test2</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">test3</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</nav>
+
+<!-- pc navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+    <ul class="navbar-nav mr-auto">
+      <li class="container-fluid">
+
+      </li>
       <li class="nav-item">
-        <!-- brug active for at highlighte den side man er inde på-->
-        <a class="nav-link active" href="index.html">Udforsk</a>
+        <a class="nav-link" href="index.html">Udforsk</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="search.html">Søg</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="favorites.html">
-          <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5vw" alt="">
-        </a>
+        <a class="nav-link" href="favorites.html">Favoritter</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="profile.html">Min profil</a>
-      </li>
-
-      <!-- dropdown -->
-      <li class="nav-item dropdown" hidden>
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-           data-bs-toggle="dropdown" aria-expanded="false">
-          More
+    </ul>
+  </div>
+  <div class="mx-auto order-0">
+    <a class="navbar-brand" href="index.html">
+      <img src="../static/assets/culture-calls-tra.png" alt="" style="height: 5vw">
+    </a>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" style="font-size: larger">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown mr-auto">
+        <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+          <img src="../static/assets/dropdown.png" style="height: 25px; color: #707071">
         </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#">test</a></li>
-          <li><a class="dropdown-item" href="#">test2</a></li>
+        <ul class="dropdown-menu dropdown-menu-lg-end">
+          <li><a class="dropdown-item" href="#">Log ind</a></li>
+          <li><a class="dropdown-item" href="#">Opret konto</a></li>
           <li>
             <hr class="dropdown-divider">
           </li>
-          <li><a class="dropdown-item" href="#">test3</a></li>
+          <li><a class="dropdown-item" href="about.html">Om os</a></li>
         </ul>
       </li>
     </ul>
-
-  </nav>
+  </div>
+</nav>
   <!-- Jumbotron Header-->
   <header class="jumbotron my-4">
     <h1 class="display-3">Culture Calls</h1>
@@ -93,8 +140,6 @@
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
 
 <script>
   function myFunction() {
@@ -119,16 +164,8 @@
     });
   });
 
-  function navBarLocation() {
-    let query = window.matchMedia("(min-width: 1024px)");
-
-    if (query.matches) {
-      document.getElementById('navbar').classList.add('sticky-top');
-
-    } else {
-      document.getElementById('navbar').classList.add('fixed-bottom');
-    }
-  }
 </script>
+<script src="../static/js/navbar.js"></script>
+
 </body>
 </html>

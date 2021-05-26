@@ -13,24 +13,33 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 
 </head>
-<body onload="navBarLocation()">
-<nav class="navbar navbar-expand navbar-light bg-light " id="navbar" style="height: 10%">
+<body style="font-family: 'Calibri Light',serif; background-color: #f5fbe2" onload="widthCheck();">
+
+<!-- Navigation-->
+
+<!-- mobile nav -->
+<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%">
+
+    <a class="nav-link instagram" href="https://instagram.com/culturecallscph" target="_blank">
+        <br> <i class="fa fa-instagram" style="height: 5vw"></i>
+    </a>
+
     <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
         <li class="nav-item">
             <!-- brug active for at highlighte den side man er inde på-->
-            <a class="nav-link active" href="index.html">Udforsk</a>
+            <a class="nav-link" href="index.html">udforsk</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="search.html">Søg</a>
+            <a class="nav-link" href="search.html">søg</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="favorites.html">
-                <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5vw" alt="">
+                <img src="../static/assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="profile.html">Min profil</a>
+            <a class="nav-link" href="profile.html">min profil</a>
         </li>
 
         <!-- dropdown -->
@@ -52,16 +61,89 @@
 
 </nav>
 
+<!-- pc navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+        <ul class="navbar-nav mr-auto">
+            <li class="container-fluid">
 
-<div class="col-12">
-    <input type="text" name="searchbox" id="searchbox" class="filterinput form-control"
-           placeholder="Search recipe titles and tags...">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Udforsk</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search.html">Søg</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="favorites.html">Favoritter</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mx-auto order-0">
+        <a class="navbar-brand" href="index.html">
+            <img src="../static/assets/culture-calls-tra.png" alt="" style="height: 5vw">
+        </a>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" style="font-size: larger">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown mr-auto">
+                <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                    <img src="../static/assets/dropdown.png" style="height: 25px; color: #707071">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><a class="dropdown-item" href="#">Log ind</a></li>
+                    <li><a class="dropdown-item" href="#">Opret konto</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="about.html">Om os</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="mb-4 mb-md-0">
+    <div class="row">
+        <div class="col text-right">
+            <a href="#jobsearch-advanced" class="text-muted link-basic collapsed" id="jobsearch-advanced-toggle" data-toggle="collapse" >
+                <span class="toggle-text-hidden">Flere søgemuligheder</span>
+            </a>
+        </div>
+    </div>
+    <div id="jobsearch-advanced" class="row collapse">
+        <div class="col-lg-5 mb-3">
+            <label class="control-label" for="category">Kategori</label>
+            <span class="multiselect-native-select" id="categories">
+                <select class="form-control" id="category" multiple="" name="subid" placeholder="Vælg kategorier" title="Jobkategori">
+                <option value="1">Musik</option>
+                <option value="2">Teater</option>
+            </select>
+            </span>
+        </div>
+            <div class="col-lg-4 mb-3">
+                <label class="control-label" for="companies">Lokation</label>
+            <select class="form-control select2-hidden-accessible" id="companies" multiple="" name="companyid" placeholder="Virksomhedsnavn" title="Virksomhed" tabindex="-1"></select><span class="select2 select2-container select2-container--default jix-select2-empty" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple form-control" role="combobox" aria-haspopup="true" aria-expanded="false" title="Virksomhed" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="chrome-autocomplete-sucks" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Virksomhed" style="width: 100px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+        </div>
+    </div>
 </div>
-<div class="col-lg-3 col-md-6 mb-4" id="cards">
+
+
+<div class="container" style="padding-top: 40px">
+
+        <input type="text" name="searchbox" id="searchbox" class="filterinput form-control"
+               placeholder="Søg efter event"><br>
+    <div class="row text-center" id="cards">
+        <div class="col-lg-3 col-md-6 mb-4">
+
+        </div>
+
+    </div>
+
 
 </div>
-<!-- Footer-->
-<div id="footer" class="py-5 bg-dark"></div>
+</body>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
@@ -73,62 +155,50 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    let list = [{
-        'name': 'The Robot Project',
-        'location': 'Folketeatret',
-        'price': '50'
-    },
-        {
-            'name': 'En Folkefjende',
-            'location': 'Nørrebro Teater',
-            'price': '75'
-        },
-        {
-            'name': 'Love is Enough',
-            'location': 'FÅR302',
-            'price': '60'
-        },
-        {
-            'name': 'Stolthed og Fordom',
-            'location': 'Nørrebro Teater',
-            'price': '45'
-        }]
 
-    list.forEach(item => {
-        const div = document.getElementById('cards')
+    $(function () {
+        $.ajax({
+            url: 'http://3.227.254.206:8090/categories',
+            success: function (result) {
+                console.log(result)
+                const div = document.getElementById('category')
+                $.each(result, function (key, value) {
+                    div.innerHTML = div.innerHTML +
+                        '<option>' + value['categoryName'] +'</option>'
 
-        div.innerHTML = div.innerHTML +
-            '<div class="card" data-role="card"><div class="card-body">' +
-            '<h4 class="card-title">' + item.name + '</h4>' +
-            '<p>' + item.price + ' ' + item.location + '</p>' +
-            '</div<div class="card-footer"><a class="btn btn-primary" href="paymentstest.html/">Gå til bestilling</a></div>></div>'
+                })
+            }
+        })
     })
 
-    console.log(list)
+    $(function () {
+        $.ajax({
+            url: 'http://3.227.254.206:8090/shows',
+            success: function (result) {
+                console.log(result)
+                const div = document.getElementById('cards')
+                $.each(result, function (key, value) {
+                    div.innerHTML = div.innerHTML +
+                        '<div class="col-lg-3 col-md-6 mb-4">' +
+                        '<div class="card" data-role="card">' + '<div id="image"></div>' +
+                        '<div class="card-body">' +
+                        '<h4 class="card-title">' + value['eventname'] + '</h4>' +
+                        '<h6>' + value['eventdate'] + " " + value['eventlocation'] + " " + value['eventprice'] + '</h6></div>' +
+                        '<div class="card-footer"><a class="btn btn-primary" href="paymentstest.html/">Gå til bestilling</a></div>' +
+                        '</div>'
+                })
+            }
+        })
+    })
 
-
-    function navBarLocation() {
-        let query = window.matchMedia("(min-width: 1024px)");
-
-        if (query.matches) {
-            document.getElementById('navbar').classList.add('sticky-top');
-
-        } else {
-            document.getElementById('navbar').classList.add('fixed-bottom');
-        }
-    }
-</script>
-<script>
     $(document).ready(function () {
         $("#searchbox").on("keyup", function () {
             const value = $(this).val().toLowerCase();
-            $('div[data-role="card"]').filter(function () {
+            $('div[class="card"]').filter(function () {
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
             });
         });
     });
-
 </script>
-
-</body>
+<script src="../static/js/navbar.js"></script>
 </html>

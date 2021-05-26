@@ -16,27 +16,33 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body onload="navBarLocation()">
-<div>
+<body style="font-family: 'Calibri Light',serif; background-color: #f5fbe2" onload="widthCheck();">
 
+<!-- Navigation-->
 
-<nav class="navbar navbar-expand navbar-light bg-light " id="navbar" style="height: 10%">
+<!-- mobile nav -->
+<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%">
+
+    <a class="nav-link instagram" href="https://instagram.com/culturecallscph" target="_blank">
+        <br> <i class="fa fa-instagram" style="height: 5vw"></i>
+    </a>
+
     <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
         <li class="nav-item">
             <!-- brug active for at highlighte den side man er inde på-->
-            <a class="nav-link active" href="index.html">Udforsk</a>
+            <a class="nav-link" href="index.html">udforsk</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="search.html">Søg</a>
+            <a class="nav-link" href="search.html">søg</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="favorites.html">
-                <img src="../static/assets/heart-small.png" class="img-fluid" style="height: 5vw" alt="">
+                <img src="../static/assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="profile.html">Min profil</a>
+            <a class="nav-link" href="profile.html">min profil</a>
         </li>
 
         <!-- dropdown -->
@@ -56,7 +62,49 @@
         </li>
     </ul>
 
-</nav></div>
+</nav>
+
+<!-- pc navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+        <ul class="navbar-nav mr-auto">
+            <li class="container-fluid">
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Udforsk</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search.html">Søg</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="favorites.html">Favoritter</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mx-auto order-0">
+        <a class="navbar-brand" href="index.html">
+            <img src="../static/assets/culture-calls-tra.png" alt="" style="height: 5vw">
+        </a>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" style="font-size: larger">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown mr-auto">
+                <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                    <img src="../static/assets/dropdown.png" style="height: 25px; color: #707071">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><a class="dropdown-item" href="#">Log ind</a></li>
+                    <li><a class="dropdown-item" href="#">Opret konto</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="about.html">Om os</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 
 favorites side
@@ -68,17 +116,7 @@ favorites side
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    function navBarLocation() {
-        let query = window.matchMedia("(min-width: 1024px)");
+<script src="../static/js/navbar.js"></script>
 
-        if (query.matches) {
-            document.getElementById('navbar').classList.add('sticky-top');
-
-        } else {
-            document.getElementById('navbar').classList.add('fixed-bottom');
-        }
-    }
-</script>
 </body>
 </html>
