@@ -4567,6 +4567,8 @@ input[type=button].btn-block {
 
 .card-title {
   margin-bottom: 0.75rem;
+  font-family: Calibri, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-weight: bold;
 }
 
 .card-subtitle {
