@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Calibri Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Calibri Light'), url('https://fonts.cdnfonts.com/s/14017/calibril.woff') format('woff');
+}
+
 /*!
 * Start Bootstrap - Heroic Features v4.3.0 (https://startbootstrap.com/template/heroic-features)
 * Copyright 2013-2021 Start Bootstrap
@@ -269,7 +276,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Calibri Light, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -315,6 +322,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 p {
@@ -414,7 +422,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Calibri Light, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-size: 1em;
 }
 
@@ -592,8 +600,9 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Calibri, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.2;
 }
 
@@ -4612,10 +4621,13 @@ input[type=button].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  font-family: Calibri Light, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .card-title {
   margin-bottom: 0.75rem;
+  font-family: Calibri, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-weight: bold;
 }
 
 .card-subtitle {
@@ -4678,14 +4690,19 @@ input[type=button].btn-block {
 .card-img,
 .card-img-top,
 .card-img-bottom {
-  flex-shrink: 0;
-  width: 100%;
+  object-fit: cover;
+  width: auto;
+  max-height: 100%;
 }
 
 .card-img,
 .card-img-top {
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
+  object-fit: cover;
+  width: auto;
+  max-height: 100%;
+
 }
 
 .card-img,
