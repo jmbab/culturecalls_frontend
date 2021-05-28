@@ -14,7 +14,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- test -->
+    <style>
+        .addReadMore.showlesscontent .SecSec,
+        .addReadMore.showlesscontent .readLess {
+            display: none;
+        }
 
+        .addReadMore.showmorecontent .readMore {
+            display: none;
+        }
+
+        .addReadMore .readMore,
+        .addReadMore .readLess {
+            font-weight: bold;
+            margin-left: 2px;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .addReadMoreWrapTxt.showmorecontent .SecSec,
+        .addReadMoreWrapTxt.showmorecontent .readLess {
+            display: block;
+        }
+    </style>
 
 </head>
 <body style="font-family: 'Calibri Light',serif; background-color: #f5fbe2" onload="widthCheck();">
@@ -115,22 +139,21 @@
                 <div class="card-body">
                     <h4 class="card-title">1984 - Back to No Future</h4>
                     <h6>30/5-2021 &nbsp; Teater Sort/Hvid &nbsp;55 DKK</h6>
-                    <p class="showmore"> Året er 1984, og den kolde krig er i fuld sving. Amerikanerne har opfundet et
+                    <p class="addReadMore showlesscontent"> Året er 1984, og den kolde krig er i fuld sving. Amerikanerne har opfundet et
                         nyt, magtfuldt våben:
                         musikvideoen. Der bliver spenderet millioner på at beame billeder af dekadence,
-                        overflod, magt, sex og transformation ind i verdens fjernsyn.<span id="dots">...</span><span
-                                class="more">I takt med at performerne husker sig selv og rekonstruerer
-                    datidens medie fantasier, begynder de at afdække, hvad der ellers kan være skrevet ind i programmeringskoden bag den farverige verden af kommerciel pop.
-                    Var teenagerne herrer over deres egne kroppe,
-                    deres egne skæbner og deres egne muligheder for at kontrollere og forme ting? Eller var de færdiglavede skabeloner,
-                    skabt til at følge en større plan? Kan de reprogrammere deres egen historie? Eller i det mindste se på den med andre øjne? Hvem eller hvad mangler i billedet?</span>
+                        overflod, magt, sex og transformation ind i verdens fjernsyn.
+                        I takt med at performerne husker sig selv og rekonstruerer
+                        datidens medie fantasier, begynder de at afdække, hvad der ellers kan være skrevet ind i programmeringskoden bag den farverige verden af kommerciel pop.
+                        Var teenagerne herrer over deres egne kroppe,
+                        deres egne skæbner og deres egne muligheder for at kontrollere og forme ting? Eller var de færdiglavede skabeloner,
+                        skabt til at følge en større plan? Kan de reprogrammere deres egen historie? Eller i det mindste se på den med andre øjne? Hvem eller hvad mangler i billedet?
 
-                        <a>+</a>
                     </p>
 
                 </div>
                 <div class="card-footer" style="background-color: #ebf4f0"><a class="btn btn-primary"
-                                                                              href="paymentstest.html">Gå til
+                                                                              href="payment.html">Gå til
                     bestilling</a></div>
             </div>
         </div>
@@ -142,17 +165,17 @@
                 <div class="card-body">
                     <h4 class="card-title">En Folkefjende</h4>
                     <h6>3/6-2021 &nbsp; Nørrebro Teater &nbsp;65 DKK</h6>
-                    <p class="showmore">Et underholdende drama om sandhed og magt.
+                    <p class="addReadMore showlesscontent">Et underholdende drama om sandhed og magt.
                         Et underholdende og aktuelt drama med Søren Pilmark i front som lægen, der er villig til at ofre
-                        alt for sandheden.<span id="dots">...</span>
-                        <span class="more">I år er vi stolte over at kunne præsentere nogle af de bedste unge musikere på Danmarks klassiske scene til Matiné- og Aftenkoncerter i et spændende og krævende repertoire, der spænder over flere århundreder. Derudover har vi skabt konceptet “Ud af boksen”, hvor vi inviterer dygtige rytmiske ensembler på scenen og ikke mindst “Drømmefanger”-koncerterne, hvor scenekanten udviskes i de sene aftentimer, og publikum kommer helt tæt på musikken.</span>
+                        alt for sandheden.
+                        I år er vi stolte over at kunne præsentere nogle af de bedste unge musikere på Danmarks klassiske scene til Matiné- og Aftenkoncerter i et spændende og krævende repertoire, der spænder over flere århundreder. Derudover har vi skabt konceptet “Ud af boksen”, hvor vi inviterer dygtige rytmiske ensembler på scenen og ikke mindst “Drømmefanger”-koncerterne, hvor scenekanten udviskes i de sene aftentimer, og publikum kommer helt tæt på musikken.
 
 
-                        <a>+</a>
+
                     </p>
                 </div>
                 <div class="card-footer" style="background-color: #ebf4f0"><a class="btn btn-primary"
-                                                                              href="paymentstest.html">Gå til
+                                                                              href="payment.html">Gå til
                     bestilling</a></div>
             </div>
         </div>
@@ -164,18 +187,18 @@
                 <div class="card-body">
                     <h4 class="card-title">Jeg står i kviksand og brøler som en hjort</h4>
                     <h6>1/6-2021 &nbsp; Teater Sort/Hvid &nbsp;65 DKK</h6>
-                    <p class="showmore">Jeg står i kviksand og brøler som en hjort er en verbal knytnæve af en
+                    <p class="addReadMore showlesscontent">Jeg står i kviksand og brøler som en hjort er en verbal knytnæve af en
                         musikforestilling.
                         En ung kvindes fortælling om desperation, ensomhed og glubende hævntørst. Det er råt. Det er
                         hudløst ærligt.
-                        Det er ubehageligt morsomt.<span id="dots">...</span>
+                        Det er ubehageligt morsomt.
 
-                        <span class="more">“Jeg er et stykke franskbrød, der ligger ude i regnen,” fortæller hun.
-                                    Lyrisk poesi møder kold dansk hverdag, når en ung kvinde tager os med på en tour de force
-                                    gennem en svimlende forelskelse. Helt derud, hvor hun pludselig finder sig selv i en ekskærestes
-                                    lejlighed i færd med at tvære indholdet i hans køleskab ud over køkkenet. Kapers er vidunderlige som konfetti.
-                                    Skete det i virkeligheden, eller løber hendes fantasi nu af med hende igen?</span>
-                        <a>+</a>
+                        “Jeg er et stykke franskbrød, der ligger ude i regnen,” fortæller hun.
+                        Lyrisk poesi møder kold dansk hverdag, når en ung kvinde tager os med på en tour de force
+                        gennem en svimlende forelskelse. Helt derud, hvor hun pludselig finder sig selv i en ekskærestes
+                        lejlighed i færd med at tvære indholdet i hans køleskab ud over køkkenet. Kapers er vidunderlige som konfetti.
+                        Skete det i virkeligheden, eller løber hendes fantasi nu af med hende igen?
+
                     </p>
                 </div>
                 <div class="card-footer" style="background-color: #ebf4f0"><a class="btn btn-primary" href="paymentstest.html">Gå til
@@ -189,20 +212,19 @@
                     <h4 class="card-title">Festival & Friends
                     </h4>
                     <h6>12.-14. juli 2021&nbsp; Nørrebro &nbsp;130 DKK</h6>
-                    <p class="showmore">Festival & Friends er en lille musikfestival, der afholdes over tre sommerdage
+                    <p class="addReadMore showlesscontent">Festival & Friends er en lille musikfestival, der afholdes over tre sommerdage
                         på Nørrebro i København. Til koncerterne kan man opleve nogle af landets dygtigste unge musikere
-                        indenfor klassisk og jazz i en intim og afslappet atmosfære..<span id="dots">...</span>
+                        indenfor klassisk og jazz i en intim og afslappet atmosfære.
 
-                        <span class="more">I år er vi stolte over at kunne præsentere nogle af de bedste unge musikere på Danmarks klassiske scene
-                                    til Matiné- og Aftenkoncerter i et spændende og krævende repertoire, der spænder over flere århundreder. Derudover har vi
-                                    skabt konceptet “Ud af boksen”, hvor vi inviterer dygtige rytmiske ensembler på scenen og ikke mindst “Drømmefanger”-koncerterne, hvor scenekanten udviskes i de sene aftentimer,
-                                    og publikum kommer helt tæt på musikken.
-                                    </span>
-                        <a>+</a>
+                        I år er vi stolte over at kunne præsentere nogle af de bedste unge musikere på Danmarks klassiske scene
+                        til Matiné- og Aftenkoncerter i et spændende og krævende repertoire, der spænder over flere århundreder. Derudover har vi
+                        skabt konceptet “Ud af boksen”, hvor vi inviterer dygtige rytmiske ensembler på scenen og ikke mindst “Drømmefanger”-koncerterne, hvor scenekanten udviskes i de sene aftentimer,
+                        og publikum kommer helt tæt på musikken.
+
                     </p>
                 </div>
                 <div class="card-footer" style="background-color: #ebf4f0"><a class="btn btn-primary"
-                    href="paymentstest.html">Gå til
+                                                                              href="payment.html">Gå til
                     bestilling</a></div>
 
             </div>
@@ -214,17 +236,15 @@
                     <div class="card-body">
                         <h4 class="card-title">Jytte fra marketing er desværre gået for i dag</h4>
                         <h6>7/6-2021&nbsp; Nørrebro Teater &nbsp;65 DKK</h6>
-                        <p class="showmore"> Morten Münster har taget Danmark med storm med sin bog om Jytte og
+                        <p class="addReadMore showlesscontent"> Morten Münster har taget Danmark med storm med sin bog om Jytte og
                             adfærdsdesign. Nu bliver bogen til et poetisk og tankevækkende
                             komedieshow med genkendelige og urkomiske situationer fra hverdagen,
-                            både dem derhjemme og på arbejdspladsen.<span id="dots">...</span><span class="more">Vi spiser kage, selvom vi er på slankekur. Vi står i kø til
-                                Black Friday, men betaler med glæde vores ubrugte fitnessabonnement. Vi er forandringsparate til fællesmøder, workshops, strategidage og
-                                PowerPoint-præsentationer, men glemmer alt om missioner og visioner, så snart det er hverdag igen.
-                                JYTTE FRA MARKETING ER DESVÆRRE GÅET FOR I DAG tager fat i alle de udfordringer, der opstår, når det uperfekte menneske forventes at have den perfekte adfærd.
-                                Hvorfor er det så svært for os at følge gode argumenter, planer og sund fornuft? Hvorfor falder vi i gang på gang? Og hvad skal der til for at skabe forandring i den virkelige verden?
-</span>
+                            både dem derhjemme og på arbejdspladsen.Vi spiser kage, selvom vi er på slankekur. Vi står i kø til
+                            Black Friday, men betaler med glæde vores ubrugte fitnessabonnement. Vi er forandringsparate til fællesmøder, workshops, strategidage og
+                            PowerPoint-præsentationer, men glemmer alt om missioner og visioner, så snart det er hverdag igen.
+                            JYTTE FRA MARKETING ER DESVÆRRE GÅET FOR I DAG tager fat i alle de udfordringer, der opstår, når det uperfekte menneske forventes at have den perfekte adfærd.
+                            Hvorfor er det så svært for os at følge gode argumenter, planer og sund fornuft? Hvorfor falder vi i gang på gang? Og hvad skal der til for at skabe forandring i den virkelige verden?
 
-                            <a>+</a>
                         </p>
 
                     </div>
@@ -240,13 +260,11 @@
                     <div class="card-body">
                         <h4 class="card-title">Stalins død</h4>
                         <h6>7/6-2021 &nbsp; Nørrebro Teater &nbsp;65 DKK</h6>
-                        <p class="showmore">Med Stalins død tager Nørrebro Teater tråden op fra DIKTATOREN og viser
+                        <p class="addReadMore showlesscontent">Med Stalins død tager Nørrebro Teater tråden op fra DIKTATOREN og viser
                             underholdende teater om, hvad der sker, når sandheden bøjes, og fakta bliver en
-                            ligegyldighed.<span id="dots">...</span>
-                            <span class="more">Josef Stalin dør, og den attraktive post som Sovjetunionens landsfader er ledig. Men hvem skal have magten? Svaret findes i kommunistpartiets øverste top, hvor alle dog har mere travlt med sig selv end med landets ve og vel. Et hæsblæsende magtspil med de mest udspekulerede bagholdsangreb begynder. Reglerne er enkle: Der er ingen!</span>
+                            ligegyldighed.
+                            Josef Stalin dør, og den attraktive post som Sovjetunionens landsfader er ledig. Men hvem skal have magten? Svaret findes i kommunistpartiets øverste top, hvor alle dog har mere travlt med sig selv end med landets ve og vel. Et hæsblæsende magtspil med de mest udspekulerede bagholdsangreb begynder. Reglerne er enkle: Der er ingen!
 
-
-                            <a>+</a>
                         </p>
                     </div>
                     <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
@@ -261,16 +279,16 @@
                     <div class="card-body">
                         <h4 class="card-title">Alle gode ting</h4>
                         <h6>4/6-2021&nbsp; Nørrebro Teater &nbsp;55 DKK</h6>
-                        <p class="showmore">Den anmelderroste Alle gode ting er en humoristisk forestilling om noget så
+                        <p class="addReadMore showlesscontent">Den anmelderroste Alle gode ting er en humoristisk forestilling om noget så
                             umorsomt som depression og selvmord. Oplev skuespiller Frank Thiel, når han bogstaveligt
                             talt
-                            sammen med publikum gør hver aften til en enestående oplevelse.<span id="dots">...</span>
+                            sammen med publikum gør hver aften til en enestående oplevelse.
 
-                            <span class="more">Is, at forelske sig, hængekøjer, lugten af gamle bøger, fuglesang, mig! Sådan lyder nogle af tingene på den liste, en ung dreng begynder at lave til sin mor. Listen over alle gode ting. Han efterlader sedlen på hendes hovedpude, efter hun endnu en gang har været indlagt med en depression. Som voksen fortæller han os, hvordan listen har fået sit eget omfattende liv.</span>
-                            <a>+</a>
+                            Is, at forelske sig, hængekøjer, lugten af gamle bøger, fuglesang, mig! Sådan lyder nogle af tingene på den liste, en ung dreng begynder at lave til sin mor. Listen over alle gode ting. Han efterlader sedlen på hendes hovedpude, efter hun endnu en gang har været indlagt med en depression. Som voksen fortæller han os, hvordan listen har fået sit eget omfattende liv.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -280,19 +298,17 @@
                     <div class="card-body">
                         <h4 class="card-title">Som brødre</h4>
                         <h6>27/5-2021 &nbsp; Teater Grob &nbsp;80 DKK</h6>
-                        <p class="showmore">Som brødre er en nyskrevet poetisk forestilling om to brødres kamp for at
+                        <p class="addReadMore showlesscontent">Som brødre er en nyskrevet poetisk forestilling om to brødres kamp for at
                             finde
                             fodfæste i en splittet tilværelse, baseret på en række digte af Alexander Mayah
-                            Larsen..<span
-                                    id="dots">...</span>
+                            Larsen..
 
-                            <span class="more">Mor, baba, storebror og lillebror. En lykkelig familie flytter til forstaden og inviterer vejens beboere på hjemmelavet risgryde og hygge.
-Udadtil stråler familielivet af varme og lykke, men på den anden side af de nedrullede persienner eksisterer en anden verden, hvor baba er konge, og forsøger at kontrollere alt. Når kongen er utilfreds med sine sønner, gentager han med jævne mellemrum, at det var en fejl de blev født. De to brødre driver længere og længere væk fra hinanden mod hver deres fællesskab, som giver dem det de mangler i livet – kærlighed og anerkendelse.
-</span>
-                            <a>+</a>
+                            Mor, baba, storebror og lillebror. En lykkelig familie flytter til forstaden og inviterer vejens beboere på hjemmelavet risgryde og hygge.
+                            Udadtil stråler familielivet af varme og lykke, men på den anden side af de nedrullede persienner eksisterer en anden verden, hvor baba er konge, og forsøger at kontrollere alt. Når kongen er utilfreds med sine sønner, gentager han med jævne mellemrum, at det var en fejl de blev født. De to brødre driver længere og længere væk fra hinanden mod hver deres fællesskab, som giver dem det de mangler i livet – kærlighed og anerkendelse.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -302,20 +318,19 @@ Udadtil stråler familielivet af varme og lykke, men på den anden side af de ne
                     <div class="card-body">
                         <h4 class="card-title">Du finder mig nederst i bunken</h4>
                         <h6>14/6-2021 &nbsp; Teater Mikado &nbsp;40 DKK</h6>
-                        <p class="showmore">Du finder mig nederst i bunken er en eksplosiv forestilling om tabte
+                        <p class="addReadMore showlesscontent">Du finder mig nederst i bunken er en eksplosiv forestilling om tabte
                             relationer
                             og
                             gemte genstande; et stykke sejldug fra en mystisk bådebygger, en sårskorpe fra et
-                            forældet forhold og en sav, der bliver symbol på en ung kvindes frigørelse.<span
-                                    id="dots">...</span>
+                            forældet forhold og en sav, der bliver symbol på en ung kvindes frigørelse.
 
-                            <span class="more">I et absurd og æstetisk univers skaber Teater Mikado og dramatiker Regina Rex ny dramatik baseret på virkelige historier, der nænsomt bindes sammen i skarpe dialoger og genkendelige scenarier fra hverdagens knuste hjerter.
-Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zagreb og bliver forvandlet til en musikalsk helaftensforestilling om de genstande, der står tilbage fra ødelagte relationer.
-</span>
-                            <a>+</a>
+
+                            I et absurd og æstetisk univers skaber Teater Mikado og dramatiker Regina Rex ny dramatik baseret på virkelige historier, der nænsomt bindes sammen i skarpe dialoger og genkendelige scenarier fra hverdagens knuste hjerter.
+                            Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zagreb og bliver forvandlet til en musikalsk helaftensforestilling om de genstande, der står tilbage fra ødelagte relationer.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html/{shows.id}">Gå til
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til
                         bestilling</a></div>
                 </div>
             </div>
@@ -326,20 +341,20 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
                     <div class="card-body">
                         <h4 class="card-title">Generation 9/11</h4>
                         <h6>12/6-2021 &nbsp; Betty Nansen &nbsp;55 DKK</h6>
-                        <p class="showmore">Danske Esther står i billedkunstlokalet på sin amerikanske skole i 2001, da
+                        <p class="addReadMore showlesscontent">Danske Esther står i billedkunstlokalet på sin amerikanske skole i 2001, da
                             allekaldet lyder. Hun er 11 og flyttet til New York året forinden. I kantinen bliver alle
                             mellemskolebørnene bedt om at dele sig i to grupper: dem der har forældre, der arbejder i
                             tvillingetårnene, og dem der ikke har. Esther føler sig udenfor. Alle hendes venner er i en
-                            anden gruppe end hende. Hendes forældre arbejder nemlig hjemmefra<span id="dots">...</span>
+                            anden gruppe end hende. Hendes forældre arbejder nemlig hjemmefra
 
-                            <span class="more">Generation 9/11 handler om at få sit første kys efter 11. september. Om at føle sig fremmed i det land,
-                                    man bor i, og om at få grineflip fordi Williams far pludselig går med pistol. Men den handler også om
-                                    en ung arkitekt ved navn Minoru Yamasaki, der får til opgave at bygge et monument for verdensfreden midt i New York City. Året er 1973, og de to bygninger kalder de for World Trade Center: En repræsentation af menneskets tro på menneskeheden, som Minoru siger ved åbningsceremonien. Fremme i 2001 oplever Esther og hendes venner, at der begynder at gro to tårne i maverne på dem.
-                                    To tårne, som bliver ved med at vokse.</span>
-                            <a>+</a>
+                            Generation 9/11 handler om at få sit første kys efter 11. september. Om at føle sig fremmed i det land,
+                            man bor i, og om at få grineflip fordi Williams far pludselig går med pistol. Men den handler også om
+                            en ung arkitekt ved navn Minoru Yamasaki, der får til opgave at bygge et monument for verdensfreden midt i New York City. Året er 1973, og de to bygninger kalder de for World Trade Center: En repræsentation af menneskets tro på menneskeheden, som Minoru siger ved åbningsceremonien. Fremme i 2001 oplever Esther og hendes venner, at der begynder at gro to tårne i maverne på dem.
+                            To tårne, som bliver ved med at vokse.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -349,22 +364,21 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
                     <div class="card-body">
                         <h4 class="card-title">Antigone 2030</h4>
                         <h6>4/6-2021&nbsp; Teatergrad &nbsp;60 DKK</h6>
-                        <p class="showmore">Med Sofokles’ 2500 år gamle tragedie som forlæg tager Teatergrad publikum
+                        <p class="addReadMore showlesscontent">Med Sofokles’ 2500 år gamle tragedie som forlæg tager Teatergrad publikum
                             med
                             ind i en nær fremtid,
-                            hvor intet er som det plejer.<span id="dots">...</span>
+                            hvor intet er som det plejer.
 
-                            <span class="more">På anklagebænken i årets vigtigste retssag sidder Antigone, anklaget for at gå imod sin kommende
-                                    svigerfar Kong Kreons jordiske love. Alle hendes handlinger har været affødt af hendes stærke moralske kodeks. Men hvad er rigtigt,
-                                    og hvad er forkert, og kan Antigone forvente en retfærdig dom for sin brøde?
-                                    Vi lægger ansvaret for Antigones skæbne i jeres hænder. Retssagen føres med kong Kreon som den dømmende myndighed flankeret af
-                                    publikum som nævninge.
-                                    Hendes skæbne er først forseglet i det øjeblik, retssagen er ovre og dommen fældet. Intet er givet på forhånd.
-</span>
-                            <a>+</a>
+                            På anklagebænken i årets vigtigste retssag sidder Antigone, anklaget for at gå imod sin kommende
+                            svigerfar Kong Kreons jordiske love. Alle hendes handlinger har været affødt af hendes stærke moralske kodeks. Men hvad er rigtigt,
+                            og hvad er forkert, og kan Antigone forvente en retfærdig dom for sin brøde?
+                            Vi lægger ansvaret for Antigones skæbne i jeres hænder. Retssagen føres med kong Kreon som den dømmende myndighed flankeret af
+                            publikum som nævninge.
+                            Hendes skæbne er først forseglet i det øjeblik, retssagen er ovre og dommen fældet. Intet er givet på forhånd.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -374,18 +388,18 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
                     <div class="card-body">
                         <h4 class="card-title">Valkyriens kamp</h4>
                         <h6>27/6-2021&nbsp; Teatergrad &nbsp;80 DKK</h6>
-                        <p class="showmore">— ny dansk musikforestilling om Thit Jensen
+                        <p class="addReadMore showlesscontent"> ny dansk musikforestilling om Thit Jensen
                             Lad os tage dig med ind i Thit Jensens stridbare verden. Her smelter et tumultarisk
-                            privatliv og en visionær kønspolitisk kamp sammen i et kompromisløst kunstnerisk virke.<span
-                                    id="dots">...</span>
+                            privatliv og en visionær kønspolitisk kamp sammen i et kompromisløst kunstnerisk virke.
 
-                            <span class="more">Fortællingen om Thit Jensen er fortællingen om den moderne kvindes frigørelse i politisk, kunstnerisk og seksuel forstand.
-                                    Om forfatteren, dramatikeren, debattøren og foredragsholderen
-                                    der sætter hele sit liv ind på at skabe ligestillede vilkår mellem kønnene.</span>
-                            <a>+</a>
+
+                            Fortællingen om Thit Jensen er fortællingen om den moderne kvindes frigørelse i politisk, kunstnerisk og seksuel forstand.
+                            Om forfatteren, dramatikeren, debattøren og foredragsholderen
+                            der sætter hele sit liv ind på at skabe ligestillede vilkår mellem kønnene.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -398,7 +412,7 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
                         <p>Rigmor sætter støj til Strunge-inspireret ungdomspoesi på Hotel Cecil
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -408,17 +422,17 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
                     <div class="card-body">
                         <h4 class="card-title">Digte & Lyd vol. 7 – Hvilken verden venter os?</h4>
                         <h6>30/5-2021 &nbsp; Vega &nbsp;85 DKK</h6>
-                        <p class="showmore">Fælles for de udvalgte, aktuelle forfattere og musikere til Digte & Lyd er
+                        <p class="addReadMore showlesscontent">Fælles for de udvalgte, aktuelle forfattere og musikere til Digte & Lyd er
                             deres
                             særlige evne til at
-                            spejle samfundet med sanselige tekster. <span id="dots">...</span>
+                            spejle samfundet med sanselige tekster.
 
-                            <span class="more">Aftenen vil byde på både rørende og oprørende refleksioner af vores samtid, der forhåbentlig åbner op for både nye perspektiver og
-                                fremkalder ord-gåsehuden.</span>
-                            <a>+</a>
+                            Aftenen vil byde på både rørende og oprørende refleksioner af vores samtid, der forhåbentlig åbner op for både nye perspektiver og
+                            fremkalder ord-gåsehuden.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -428,7 +442,7 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
                     <div class="card-body">
                         <h4 class="card-title">Copenhagen Summer Dance</h4>
                         <h6>22/6-2021 &nbsp; Ofelia Beach &nbsp;Gratis</h6>
-                        <p class="showmore">Hvordan skaber man stor kunst? Et ultimativt og storslået show, der får
+                        <p class="addReadMore showlesscontent">Hvordan skaber man stor kunst? Et ultimativt og storslået show, der får
                             publikum
                             til at dåne af ren og skær lykkerus? Og hvad med alt det, der bliver sorteret fra i
                             processen?
@@ -436,14 +450,14 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
                             mester
                             i at forene det vanvittige med det alvorlige. I forestillingen møder vi en række vidt
                             forskellige skøre skæbner, og snart tegner der sig et potpourri af små satiriske nedslag
-                            inspireret af kunstnerens iver efter at skabe det ”perfekte show”. <span
-                                    id="dots">...</span>
+                            inspireret af kunstnerens iver efter at skabe det ”perfekte show”.
 
-                            <span class="more">Årets program byder blandt andet på et nyt danseværk af vores kunstnerisk leder og koreograf Pontus Lidberg med livemusik af den cool Københavnerduo Den Sorte Skole.</span>
-                            <a>+</a>
+
+                            Årets program byder blandt andet på et nyt danseværk af vores kunstnerisk leder og koreograf Pontus Lidberg med livemusik af den cool Københavnerduo Den Sorte Skole.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -453,20 +467,20 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
                     <div class="card-body">
                         <h4 class="card-title">Two Lions and a Castle</h4>
                         <h6>27/6-2021 &nbsp; Dansk Danseteater &nbsp;85 DKK</h6>
-                        <p class="showmore">Hvordan skaber man stor kunst? Et ultimativt og storslået show, der får
+                        <p class="addReadMore showlesscontent">Hvordan skaber man stor kunst? Et ultimativt og storslået show, der får
                             publikum
                             til at dåne af ren og skær lykkerus?
                             Og hvad med alt det, der bliver sorteret fra i processen? Disse spørgsmål bliver taget under
                             kærlig behandling
                             af koreografen Roy Assaf, som er en mester i at forene det vanvittige med det alvorlige.
-                            <span id="dots">...</span>
 
-                            <span class="more">I forestillingen møder vi en række vidt forskellige skøre skæbner, og snart tegner der sig et potpourri
-                                af små satiriske nedslag inspireret af kunstnerens iver efter at skabe det ”perfekte show”.</span>
-                            <a>+</a>
+
+                            I forestillingen møder vi en række vidt forskellige skøre skæbner, og snart tegner der sig et potpourri
+                            af små satiriske nedslag inspireret af kunstnerens iver efter at skabe det ”perfekte show”.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -481,7 +495,7 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
 
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
                 </div>
             </div>
@@ -492,22 +506,27 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
                     <div class="card-body">
                         <h4 class="card-title">My Deer Hunter</h4>
                         <h6>17/5-2021&nbsp; Betty Nansen &nbsp;75 DKK</h6>
-                        <p class="showmore">Fire krigsveteraner kæmper deres helt egen kamp for at vende tilbage til
+                        <p class="addReadMore showlesscontent">
+                            Fire krigsveteraner kæmper deres helt egen kamp for at vende tilbage til
                             samfundet igen. En kamp, hvor de udfordrer deres PTSD,
-                            deres skam og manglende selvtillid på den mest ultimative og udstillende måde.<span
-                                    id="dots">...</span>
+                            deres skam og manglende selvtillid på den mest ultimative og udstillende måde.
 
-                            <span class="more">Med den filmiske klassiker Deer Hunter som guide lader Fix&Foxy fire krigsveteraner
-                    møde sig selv og dem de var engang. Her vender de tilbage til de livsforandrende øjeblikke, de har gennemlevet,
-                    i forsøget på at genskabe deres liv. Det liv de havde, før det blev knust.</span>
-                            <a>+</a>
+
+                            Med den filmiske klassiker Deer Hunter som guide lader Fix&Foxy fire krigsveteraner
+                            møde sig selv og dem de var engang. Her vender de tilbage til de livsforandrende øjeblikke, de har gennemlevet,
+                            i forsøget på at genskabe deres liv. Det liv de havde, før det blev knust.
+
                         </p>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary" href="paymentstest.html">Gå til bestilling</a>
+                    <div class="card-footer"><a class="btn btn-primary" href="payment.html">Gå til bestilling</a>
                     </div>
 
                 </div>
             </div>
+            <!-- test -->
+            <p class="addReadMore showlesscontent">Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach "lorem ipsum" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks)Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die</p>
+            <p class="addReadMore showlesscontent">Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach "lorem ipsum" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks)Es ist ein lang erwiesener Fakt</p>
+
         </div>
     </div>
 </div>
@@ -525,27 +544,74 @@ Forestillingen er skabt med inspiration fra Museum of Broken Relationships i Zag
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
 
-    document.querySelectorAll(".showmore").forEach(function (p) {
-        p.querySelector("a").addEventListener("click", function () {
-            p.classList.toggle("show");
-            this.textContent = p.classList.contains("show") ? "-" : "+";
+    function AddReadMore() {
+        //This limit you can set after how much characters you want to show Read More.
+        var carLmt = 300;
+        // Text to show when text is collapsed
+        var readMoreTxt = " ... Read More";
+        // Text to show when text is expanded
+        var readLessTxt = " Read Less";
+
+
+        //Traverse all selectors with this class and manupulate HTML part to show Read More
+        $(".addReadMore").each(function() {
+            if ($(this).find(".firstSec").length)
+                return;
+
+            var allstr = $(this).text();
+            if (allstr.length > carLmt) {
+                var firstSet = allstr.substring(0, carLmt);
+                var secdHalf = allstr.substring(carLmt, allstr.length);
+                var strtoadd = firstSet + "<span class='SecSec'>" + secdHalf + "</span><span class='readMore'  title='Click to Show More'>" + "+"+ "</span><span class='readLess' title='Click to Show Less'>" + "-" + "</span>";
+                $(this).html(strtoadd);
+            }
+
         });
+        //Read More and Read Less Click Event binding
+        $(document).on("click", ".readMore,.readLess", function() {
+            $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
+        });
+    }
+    $(function() {
+        //Calling function after Page Load
+        AddReadMore();
     });
 
-    $(document).ready(function () {
-        $.ajax({
-            url: 'http://3.227.254.206:8090/shows',
-            success: function (result) {
-                console.log(result)
-            }
-        })
-    })
+</script>
 
+function myFunction() {
+var dots = document.getElementById("dots");
+var moreText = document.getElementById("more");
+var btnText = document.getElementById("myBtn");
 
+if (dots.style.display === "none") {
+dots.style.display = "inline";
+btnText.innerHTML = "Read More";
+moreText.style.display = "none";
+} else {
+dots.style.display = "none";
+btnText.innerHTML = "-";
+moreText.style.display = "inline";
+}
 
+document.querySelectorAll(".showmore").forEach(function (p) {
+p.querySelector("a").addEventListener("click", function () {
+p.classList.toggle("show");
+this.textContent = p.classList.contains("show") ? "-" : "+";
+});
+});
+
+$(document).ready(function () {
+$.ajax({
+url: 'http://3.227.254.206:8090/shows',
+success: function (result) {
+console.log(result)
+}
+})
+})
+}
 
 </script>
 <script src="../static/js/navbar.js"></script>
