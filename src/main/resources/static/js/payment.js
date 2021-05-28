@@ -1,13 +1,9 @@
 
 let bookingString;
 
-
-let bookingString;
-
 $(document).ready(function() {
     // Construct URL object using current browser URL
     var url = new URL('http://3.227.254.206:8090/shows/');
-
 
     // Get query parameters object
     var params = url.searchParams;
@@ -18,10 +14,6 @@ $(document).ready(function() {
     // Set it as the dropdown value
     $("dropD").val(results_delivery);
 });
-
-
-
-
 
 $(function () {
     $('#content').on('click', function () {
