@@ -41,7 +41,7 @@
     </style>
 
 </head>
-<body style="font-family: Calibri Light, serif; background-color: #f5fbe2" onload="widthCheck();">
+<body style="font-family: 'Calibri Light',serif; background-color: #f5fbe2" onload="widthCheck();">
 
 <!-- Navigation-->
 
@@ -581,37 +581,6 @@
 
 </script>
 
-function myFunction() {
-var dots = document.getElementById("dots");
-var moreText = document.getElementById("more");
-var btnText = document.getElementById("myBtn");
-
-if (dots.style.display === "none") {
-dots.style.display = "inline";
-btnText.innerHTML = "Read More";
-moreText.style.display = "none";
-} else {
-dots.style.display = "none";
-btnText.innerHTML = "-";
-moreText.style.display = "inline";
-}
-
-document.querySelectorAll(".showmore").forEach(function (p) {
-p.querySelector("a").addEventListener("click", function () {
-p.classList.toggle("show");
-this.textContent = p.classList.contains("show") ? "-" : "+";
-});
-});
-
-$(document).ready(function () {
-$.ajax({
-url: 'http://3.227.254.206:8090/shows',
-success: function (result) {
-console.log(result)
-}
-})
-})
-}
 
 </script>
 <script src="../static/js/navbar.js"></script>
