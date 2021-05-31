@@ -10222,6 +10222,9 @@ h3 {
     display: none;
   }
 
+  .custom_nav .navbar.navbar-fixed-top .navbar-inner{
+    background: rgba(255, 255, 255, 1);}
+
   .badge {
     border: 1px solid #000;
   }
