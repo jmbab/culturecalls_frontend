@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Title</title>
-    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
-    <link href="../styles.css" rel="stylesheet"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-            crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Culture Calls</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- test -->
+    <style>
+        .addReadMore.showlesscontent .SecSec,
+        .addReadMore.showlesscontent .readLess {
+            display: none;
+        }
+
+        .addReadMore.showmorecontent .readMore {
+            display: none;
+        }
+
+        .addReadMore .readMore,
+        .addReadMore .readLess {
+            font-weight: bold;
+            margin-left: 2px;
+            color: #cc6666;
+            cursor: pointer;
+        }
+
+        .addReadMoreWrapTxt.showmorecontent .SecSec,
+        .addReadMoreWrapTxt.showmorecontent .readLess {
+            display: block;
+        }
+    </style>
+
 </head>
 
 <!-- BAGGRUND FARVE -->
@@ -25,7 +49,6 @@
 
 <!-- mobile nav -->
 <nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#dff9ed";>
-
 
     <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
@@ -82,26 +105,6 @@
         <div class="jumbotron"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
         </div>
     </div>
-    <div class="col-lg-2">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown mr-auto">
-
-                <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                    <img src="../assets/dropdown.png" style="height: 25px; color: #dff9ed">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><a class="dropdown-item" href="#">Log ind</a></li>
-                    <li><a class="dropdown-item" href="#">Opret konto</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="/about">Om os</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../js/navbar.js"></script>
 
@@ -138,7 +141,7 @@
     })
 </script>
 <!-- Footer-->
-<div id="footer" class="py-5 bg-light" style="background-color: #ebf4f0"></div>
+<div id="footer" class="py-5 bg-light" ></div>
 
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossOrigin="anonymous"></script>
