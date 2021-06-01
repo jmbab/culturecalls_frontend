@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class WebController {
 
+
     @GetMapping("/search")
     public String index() {
         return "search";
