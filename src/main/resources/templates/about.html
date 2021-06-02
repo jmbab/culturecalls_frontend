@@ -15,33 +15,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body style="font-family: 'Calibri Light',serif; background-color: #f5fbe2" onload="widthCheck();">
+<!-- BAGGRUND FARVE -->
+<body style="font-family: 'Calibri Light',serif; background-color: #ebf4f0" onload="widthCheck();">
 
 <!-- Navigation-->
 
 <!-- mobile nav -->
-<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%">
+<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#dff9ed";>
 
-  <a class="nav-link instagram" href="https://instagram.com/culturecallscph" target="_blank">
-    <br> <i class="fa fa-instagram" style="height: 5vw"></i>
-  </a>
 
   <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
     <li class="nav-item">
       <!-- brug active for at highlighte den side man er inde på-->
-      <a class="nav-link" href="index.html">udforsk</a>
+      <a class="nav-link" href="/">udforsk</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="search.html">søg</a>
+      <a class="nav-link" href="/search">søg</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="favorites.html">
+      <a class="nav-link" href="/favorites">
         <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
       </a>
     </li>
+
     <li class="nav-item">
-      <a class="nav-link" href="profile.html">min profil</a>
+      <a class="nav-link" href="/profile">min profil</a>
     </li>
 
     <!-- dropdown -->
@@ -50,14 +49,6 @@
          data-bs-toggle="dropdown" aria-expanded="false">
         More
       </a>
-      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="#">test</a></li>
-        <li><a class="dropdown-item" href="#">test2</a></li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" href="#">test3</a></li>
-      </ul>
     </li>
   </ul>
 
@@ -71,24 +62,27 @@
 
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Udforsk</a>
+        <a class="nav-link" href="/">Udforsk</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="search.html">Søg</a>
+        <a class="nav-link" href="/search">Søg</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="favorites.html">Favoritter</a>
+        <a class="nav-link" href="/favorites">Favoritter</a>
       </li>
     </ul>
   </div>
-  <div class="mx-auto order-0">
-    <a class="navbar-brand" href="index.html">
-      <img src="../assets/culture-calls-tra.png" alt="" style="height: 5vw">
-    </a>
+</nav>
+
+<div class="container">
+  <div class="col-lg-10">
+    <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
+    </a></div>
   </div>
-  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" style="font-size: larger">
+  <div class="col-lg-2">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown mr-auto">
+
         <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
           <img src="../assets/dropdown.png" style="height: 25px; color: #707071">
         </a>
@@ -98,42 +92,48 @@
           <li>
             <hr class="dropdown-divider">
           </li>
-          <li><a class="dropdown-item" href="about.html">Om os</a></li>
+          <li><a class="dropdown-item" href="/about">Om os</a></li>
         </ul>
       </li>
     </ul>
   </div>
-</nav>
-  <!-- Jumbotron Header-->
-  <header class="jumbotron my-4">
+</div>
+
+<br><br>
+
+<div class="container-fluid">
     <h1 class="display-3">Culture Calls</h1>
+    <br>
 
     <p class="lead">
-      Culture Calls er en platform, som samler kulturens tilbud og forbinder dens udbydere med forbrugerne når de resterende
-      ledige billetter sælges billigt på forestillingsdagen.
-      <br>Culture Calls gør det nemmere at opsøge kunsten og kulturen.
+      Culture Calls er en platform, som samler kulturens tilbud og forbinder dens udbydere med
+      forbrugerne, når de resterende ledige billetter sælges billigt på forestillingsdagen.
+      <br><br>
+      Culture Calls gør det nemmere at opsøge kunsten og kulturen.
       Vi ønsker at bidrage til et stærkt kulturliv og en tilgængelig kunstscene, og vi tror på,
       at aktiv beskæftigelse med kunst og kultur er med til at skabe kritiske refleksioner, et
-      intellektuelt udsyn samt selvindsigt hos befolkningen. <br> Derfor skal alle, uanset social og
-      økonomisk baggrund, have muligheden for at tage del og finde fællesskab i den danske
-      kulturelle skat. <br> <br>
+      intellektuelt udsyn samt selvindsigt hos befolkningen.
+      <br><br>
+      Derfor skal alle, uanset social og økonomisk baggrund, have muligheden for at tage del og
+      finde fællesskab i den danske kulturelle skat.
+    </p>
+    <br>
+    <p>
+      <strong>Følg os på Instagram:</strong>
       <a href="http://instagram.com/culturecallscph" class="instagram" target="_blank">
-      <i class="fa fa-instagram"></i>
+        <i class="fa fa-instagram"></i>
       </a>
-      <p class="m-0 text-center text-black-50">
+      <br>
+      <strong>Send os en mail:</strong> <a style=" text-decoration: none; color: black" href="mailto: culturecallscph@gmail.com">culturecallscph@gmail.com</a>
+    </p>
 
-      Send mail : <a style=" text-decoration: none;color: black" href="mailto: culturecallscph@gmail.com">culturecallscph@gmail.com</a>
-      </p>
-      </p>
+</div>
 
-  </header>
-  <p><div class="container"><p class="m-0 text-center text-black-50"><a href="about.html" style="text-decoration: none; color: black">Læs mere om Culture Calls</a> - Send mail : <a style=" text-decoration: none;color: black" href = "mailto: culturecallscph@gmail.com">culturecallscph@gmail.com</a></p></div>
-  </p>
-
-
+<br><br>
+<br><br>
 
   <!-- Footer-->
-  <div id="footer" class="py-5 bg-dark"></div>
+<!--  <div id="footer" class="py-5 bg-light"></div>-->
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"

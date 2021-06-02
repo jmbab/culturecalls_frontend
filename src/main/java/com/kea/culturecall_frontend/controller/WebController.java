@@ -13,7 +13,7 @@ public class WebController {
     }
 
     @GetMapping("/about")
-    public String about() {return "about";    }
+    public String about() {return "about"; }
 
     @GetMapping("/favorites")
     public String favorites() {

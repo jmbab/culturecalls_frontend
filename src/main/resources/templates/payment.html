@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <meta name="description" content=""/>
-  <meta name="author" content=""/>
-  <title>Culture Calls</title>
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>My profile</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
   <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="../static/styles.css" rel="stylesheet"/>
+  <link href="../styles.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
-
-<body style="font-family: 'Calibri Light',serif; background-color: #f5fbe2" onload="widthCheck();">
+<!-- BAGGRUND FARVE -->
+<body style="font-family: 'Calibri Light',serif; background-color: #ebf4f0" onload="widthCheck();">
 
 <!-- Navigation-->
 
 <!-- mobile nav -->
-<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%">
+<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#dff9ed";>
 
-  <a class="nav-link instagram" href="https://instagram.com/culturecallscph" target="_blank">
-    <br> <i class="fa fa-instagram" style="height: 5vw"></i>
-  </a>
 
   <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
     <li class="nav-item">
       <!-- brug active for at highlighte den side man er inde på-->
-      <a class="nav-link" href="index.html">udforsk</a>
+      <a class="nav-link" href="/">udforsk</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="search.html">søg</a>
+      <a class="nav-link" href="/search">søg</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="favorites.html">
-        <img src="../static/assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
+      <a class="nav-link" href="/favorites">
+        <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
       </a>
     </li>
+
     <li class="nav-item">
-      <a class="nav-link" href="profile.html">min profil</a>
+      <a class="nav-link" href="/profile">min profil</a>
     </li>
 
     <!-- dropdown -->
@@ -51,14 +44,6 @@
          data-bs-toggle="dropdown" aria-expanded="false">
         More
       </a>
-      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="#">test</a></li>
-        <li><a class="dropdown-item" href="#">test2</a></li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" href="#">test3</a></li>
-      </ul>
     </li>
   </ul>
 
@@ -72,24 +57,30 @@
 
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Udforsk</a>
+        <a class="nav-link" href="/">Udforsk</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="search.html">Søg</a>
+        <a class="nav-link" href="/search">Søg</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="favorites.html">Favoritter</a>
+        <a class="nav-link" href="/favorites">Favoritter</a>
       </li>
     </ul>
   </div>
   <div class="mx-auto order-0">
-    <a class="navbar-brand" href="index.html">
-      <img src="../assets/culture-calls-tra.png" alt="" style="height: 5vw">
-    </a>
+
   </div>
-  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" style="font-size: larger">
+</nav>
+
+<div class="container">
+  <div class="col-lg-10">
+    <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
+    </a></div>
+  </div>
+  <div class="col-lg-2">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown mr-auto">
+
         <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
           <img src="../assets/dropdown.png" style="height: 25px; color: #707071">
         </a>
@@ -99,46 +90,44 @@
           <li>
             <hr class="dropdown-divider">
           </li>
-          <li><a class="dropdown-item" href="about.html">Om os</a></li>
+          <li><a class="dropdown-item" href="/about">Om os</a></li>
         </ul>
       </li>
     </ul>
   </div>
-</nav>
+</div>
 
-<div class="container" id="main">
-  <div class="row">
-    <br>
+<br><br>
 
-    <tbody style="text-align: left; color:darkgray">
-    </tbody>
+<div class="container">
+  <div class="col-lg-10">
+    <div class="card-body">
+        <tbody>
 
-    </table>
+        <h2>Send e-mail med din bestilling</h2>
+
+          <form action="mailto:culturecallscph@gmail.com" method="post" enctype="text/plain">
+            Fulde navn:<br>
+            <input type="text" name="name" size="40"><br>
+            E-mail:<br>
+            <input type="text" name="mail" size="35"><br>
+            Event:<br>
+            <input type="text" name="show" size="35"><br>
+            Antal billetter:<br>
+            <input type="text" name="tickets" size="10"><br>
+            Evt. kommentarer:<br>
+            <input type="text" name="comment" size="40"><br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+          </form>
+
+        </tbody>
+    </div>
   </div>
 </div>
 
-<div class="card-body">
-  <tbody>
-
-  <h2>Send e-mail med din bestilling</h2>
-
-  <form action="mailto:culturecallscph@gmail.com" method="post" enctype="text/plain">
-    Fulde navn:<br>
-    <input type="text" name="name" size="40"><br>
-    E-mail:<br>
-    <input type="text" name="mail" size="35"><br>
-    Event:<br>
-    <input type="text" name="show" size="35"><br>
-    Antal billetter:<br>
-    <input type="text" name="tickets" size="10"><br>
-    Evt. kommentarer:<br>
-    <input type="text" name="comment" size="40"><br><br>
-    <input type="submit" value="Send">
-    <input type="reset" value="Reset">
-  </form>
-
-
-  </tbody>
+<br><br>
+<br><br>
 
   <script>
 
@@ -190,10 +179,18 @@
     })
 
   </script>
+
 </div>
+<!-- Footer-->
+<!--<div id="footer" class="py-5 bg-dark"></div>-->
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="../js/navbar.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../js/payment.js"></script>
 </body>
 </html>
