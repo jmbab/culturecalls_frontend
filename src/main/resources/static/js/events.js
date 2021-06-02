@@ -13,9 +13,8 @@ $(document).ready(function () {
                     "</td>" + "<td>" + value["eventname"] +
                     "<td>" + value["eventdate"] +
                     "</td>" + "<td>" + value["eventstarttime"] +
-                    "<td>" + value["entendtime"] +
-                    "</td>" + "<td>" + value["eventprice"] +
                     "<td>" + value["eventlocation"] +
+                    "</td>" + "<td>" + value["eventprice"] +
                     "</td>" + "<td>" + value["eventmaxtickets"] +
                     "<td>" + value["eventcategory"]
             });

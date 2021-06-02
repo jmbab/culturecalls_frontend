@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nyt event</title>
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!--     Bootstrap for JS-->
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+          crossorigin="anonymous"></script>
+
+</head>
+<body style="font-family: 'Calibri Light',serif; background-color: #ebf4f0" onload="widthCheck();">
+<nav class="navbar navbar-expand navbar-light navbar-bg fixed-bottom" id="navbar" style="height: 10%; background-color:#dff9ed">
+
+  <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw; ">
+
+    <li class="nav-item">
+      <!-- brug active for at highlighte den side man er inde på-->
+      <a class="nav-link" href="/">udforsk</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/search">søg</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/favorites">
+        <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/profile">min profil</a>
+    </li>
+
+    <!-- dropdown -->
+    <li class="nav-item dropdown" hidden="">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        More
+      </a>
+    </li>
+  </ul>
+
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light navbar-bg" style="height: 10%; background-color:#dff9ed">
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+    <ul class="navbar-nav mr-auto">
+      <li class="container-fluid">
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/">Udforsk</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/search">Søg</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/favorites">Favoritter</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container" id="main">
+  <div class="row">
+    <h1>Opret nyt event</h1>
+    <div class="col-md-10 col-sm">
+      <form>
+        <div class="mb-3">
+          <label for="eventname" class="form-label">Titel</label>
+          <input class="form-control" required id="eventname">
+        </div>
+        <div class="mb-3">
+          <label for="eventprice" class="form-label">Pris</label>
+          <input class="form-control" required id="eventprice">
+        </div>
+        <div class="mb-3">
+          <label for="eventtickets" class="form-label">Resterende billetter</label>
+          <input class="form-control" required id="eventtickets">
+        </div>
+        <div class="mb-3">
+          <label for="locDrop" class="form-label">Sted</label>
+          <select class="form-control" required id="locDrop"></select>
+        </div>
+        <div class="mb-3">
+          <label for="catDrop" class="form-label">Kategori</label>
+          <select class="form-control" required id="catDrop"></select>
+        </div>
+        <div class="mb-3">
+          <label for="eventtime" class="form-label">Klokken</label>
+          <input type="time" class="form-control" required id="eventtime">
+        </div>
+        <div class="mb-3">
+          <label for="eventdate" class="form-label">Dato</label><br>
+          <input type="date" min="2021-06-01" max="2099-01-01" required  id="eventDate"><br>
+        </div>
+        <button type="button" class="btn btn-primary" id="add-event" style="background-color: #1e7e34; border-color: #1e7e34">Opret</button>
+      </form>
+      <p id="err" style="color: red"></p>
+    </div>
+  </div>
+</div>
+<div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  let eventString;
+
+  $(document).ready(function () {
+    $.ajax({
+      url: "http://localhost:8090/categories",
+      success: function (result) {
+        let options = " ";
+        $.each(result, function (key, val) {
+          options += "<option>" + val['catName']
+        });
+        eventString = $("#catDrop");
+        $(eventString).html(options)
+      }
+    });
+  })
+
+  $(document).ready(function () {
+    $.ajax({
+      url: "http://localhost:8090/locations",
+      success: function (result) {
+        let options = " ";
+        $.each(result, function (key, val) {
+          options += "<option>" + val['locName']
+        });
+        eventString = $("#locDrop");
+        $(eventString).html(options)
+      }
+    });
+  })
+
+
+
+  $(function () {
+    $('#add-event').on('click', function () {
+      let dataString = {
+        evtName: $('#eventname').val(),
+        evtDate: $('#eventDate').val(),
+        evtTime: $('#eventtime').val(),
+        evtPrice: $('#eventprice').val(),
+        evtLocation: {
+          locId: $("#locDrop").get(0).selectedIndex
+        },
+        evtTickets: $('#eventtickets').val(),
+        evtCategory: {
+          catId: $("#catDrop").get(0).selectedIndex
+        }
+      }
+
+      function maxCheck(x, y) {
+        if (x <= y) {
+          return x + 1;
+        }
+      }
+
+      eventString = maxCheck(dataString.evtLocation.locId, 5)
+      console.log(dataString.evtLocation.locId= eventString)
+      eventString = maxCheck(dataString.evtCategory.catId, 6)
+
+      console.log(dataString.evtCategory.catId= eventString)
+
+      console.log(dataString);
+      $.ajax({
+        type: 'POST',
+        url: 'http://localhost:8090/newevent',
+        dataType: 'json',
+        //stringify formatere den JSON data der skal sendes til datatyper der passer til java objekterne
+        data: JSON.stringify(dataString),
+        headers: {
+          'Accept': 'application/json',
+          'Content-type': 'application/json'
+        },
+        success: function (data) {
+          alert('Event oprettet!')
+          console.log(data);
+        },
+        error: function () {
+          $('#err').html("Oops, something went wrong!")
+        }
+      })
+    });
+  });
+</script>
+<script src="../js/navbar.js"></script>
+</body>
+</html>
