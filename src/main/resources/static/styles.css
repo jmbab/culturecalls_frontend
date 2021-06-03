@@ -17,6 +17,24 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+#add-event{
+  color: white;
+  background-color: #cc6666;
+  border-color: #cc6666;
+}
+
+#btn-red{
+  color: white;
+  background-color: #cc6666;
+  border-color: #cc6666;
+}
+
+#card-footer2{
+  background-color: #cc6666;
+  color: #cc6666;
+  border-color: #cc6666;
+}
 :root {
   --blue: #cc6666;
   --indigo: #6610f2;

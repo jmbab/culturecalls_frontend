@@ -103,7 +103,6 @@
         <input type="text" name="searchbox" id="searchbox" class="filterinput form-control"
                placeholder="Søg efter event"><br>
         <div class="row text-center" id="cards">
-            <div class="col-lg-3 col-md-6 mb-4">
 
             </div>
         </div>
@@ -148,9 +147,11 @@
                         '<div class="col-lg-3 col-md-6 mb-4">' +
                         '<div class="card" data-role="card">' + '<div id="image"></div>' +
                         '<div class="card-body">' +
-                        '<h4 class="card-title">' + value['eventname'] + '</h4>' +
-                        '<h6>' + value['eventdate'] + " " + value['eventlocation'] + " " + value['eventprice'] + '</h6></div>' +
-                        '<div class="card-footer"><a class="btn btn-primary" href="payment.html/">Gå til bestilling</a></div>' +
+                        '<h4 class="card-title">' + value['evtName'] + '</h4>' +
+                        '<h6>' + value['evtDate'] + " " + value['evtLocation']['locName'] + " "  + '</h6>' +
+                        '<h6>' + "Pris pr. billet: " + value['evtPrice'] + ",-</h6>" +
+                        '<h6>' + "Billetter tilbage:" + value['evtTickets'] + "</h6></div>" +
+                        '<div class="card-footer" id="card-footer2"><a class="btn" id="btn-red" href="payment.html/">Gå til bestilling</a></div>' +
                         '</div>'
                 })
             }
