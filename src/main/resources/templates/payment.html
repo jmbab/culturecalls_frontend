@@ -3,98 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>My profile</title>
+  <title>Betaling</title>
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="../styles.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+
 </head>
+
 <!-- BAGGRUND FARVE -->
 <body style="font-family: 'Calibri Light',serif; background-color: #ebf4f0" onload="widthCheck();">
 
 <!-- Navigation-->
+<div class="container" style="background-color: #ebf4f0">
+  <!-- mobile nav -->
+  <nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#ebf4f0">
 
-<!-- mobile nav -->
-<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#dff9ed";>
+    <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
-
-  <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
-
-    <li class="nav-item">
-      <!-- brug active for at highlighte den side man er inde på-->
-      <a class="nav-link" href="/">udforsk</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/search">søg</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/favorites">
-        <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
-      </a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="/profile">min profil</a>
-    </li>
-
-    <!-- dropdown -->
-    <li class="nav-item dropdown" hidden>
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-         data-bs-toggle="dropdown" aria-expanded="false">
-        More
-      </a>
-    </li>
-  </ul>
-
-</nav>
-
-<!-- pc navbar -->
-<nav class="navbar navbar-expand-lg navbar-light navbar-bg">
-  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
-    <ul class="navbar-nav mr-auto">
-      <li class="container-fluid">
-
+      <li class="nav-item">
+        <a class="nav-link" href="/">udforsk</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/">Udforsk</a>
+        <a class="nav-link" href="/search">søg</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/search">Søg</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/favorites">Favoritter</a>
-      </li>
-    </ul>
-  </div>
-  <div class="mx-auto order-0">
-
-  </div>
-</nav>
-
-<div class="container">
-  <div class="col-lg-10">
-    <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
-    </a></div>
-  </div>
-  <div class="col-lg-2">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown mr-auto">
-
-        <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-          <img src="../assets/dropdown.png" style="height: 25px; color: #707071">
+        <a class="nav-link" href="/favorites">
+          <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
         </a>
-        <ul class="dropdown-menu dropdown-menu-lg-end">
-          <li><a class="dropdown-item" href="#">Log ind</a></li>
-          <li><a class="dropdown-item" href="#">Opret konto</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="/about">Om os</a></li>
-        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">min profil</a>
+      </li>
+
+      <!-- dropdown -->
+      <li class="nav-item dropdown" hidden>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+           data-bs-toggle="dropdown" aria-expanded="false">
+          More
+        </a>
       </li>
     </ul>
+
+  </nav>
+
+  <!-- pc navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="height: 10%; background-color:#ebf4f0">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+      <ul class="navbar-nav mr-auto">
+        <li class="container-fluid">
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Udforsk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search">Søg</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/favorites">Favoritter</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-2">
+      <ul class="navbar-nav ml-auto" style="float: right">
+        <li class="nav-item dropdown mr-auto">
+
+          <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            <img src="../assets/dropdown.png" alt="" style="height: 25px; color: #707071">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-lg-end">
+            <li><a class="dropdown-item" href="#">Log ind</a></li>
+            <li><a class="dropdown-item" href="#">Opret konto</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/about">Om os</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="col-lg-10">
+      <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
+      </a></div>
+    </div>
+
   </div>
+
 </div>
 
 <br><br>
@@ -126,70 +127,62 @@
   </div>
 </div>
 
-<br><br>
-<br><br>
-
-  <script>
-
-    $(".dropdown-item").click(function() {
-      $(this).find("shows").val($(this).text(eventname))
-    });
-    var url = $(this).data('http://3.227.254.206:8090/shows/');
-    var data = [{
-      "idevent": "1234",
-      "eventname": "Teater"
-    },
-      {
-        "idevent": "5678",
-        "eventname": "Koncert"
-      },
-      {
-        "idevent": "9635",
-        "eventname": "Kunstudstilling"
-      }
-    ]
-    let dropdown = $('#itemCode');
-    dropdown.empty();
-    $.each(data, function(key, entry) {
-      dropdown.append($('<a class="dropdown-item"></a>\n').attr('value', entry.idevents).text(entry.eventname));
-
-    });
-    $(".dropdown-item").on("change", function(e) {
-      var selectedOption = this.value;
-      alert(selectedOption)
-    });
-
-
-    const btn = document.getElementById('btn');
-
-    btn.addEventListener('click', () => {
-      alert('Din bestilling er bekræftet');
-    });
-
-    btn.addEventListener('tap', () => {
-      alert('Din bestilling er bekræftet');
-    });
-
-  </script>
-  <script type="text/javascript">
-
-    $(document).ready(function(content){
-      $("#dropD").load("src","http://3.227.254.206:8090/shows/");
-
-    })
-
-  </script>
-
-</div>
-<!-- Footer-->
-<!--<div id="footer" class="py-5 bg-dark"></div>-->
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
 
+  $(".dropdown-item").click(function() {
+    $(this).find("shows").val($(this).text(eventname))
+  });
+  var url = $(this).data('http://3.227.254.206:8090/events');
+  var data = [{
+    "idevent": "1234",
+    "eventname": "Teater"
+  },
+    {
+      "idevent": "5678",
+      "eventname": "Koncert"
+    },
+    {
+      "idevent": "9635",
+      "eventname": "Kunstudstilling"
+    }
+  ]
+  let dropdown = $('#itemCode');
+  dropdown.empty();
+  $.each(data, function(key, entry) {
+    dropdown.append($('<a class="dropdown-item"></a>\n').attr('value', entry.idevents).text(entry.eventname));
+
+  });
+  $(".dropdown-item").on("change", function(e) {
+    var selectedOption = this.value;
+    alert(selectedOption)
+  });
+
+
+  const btn = document.getElementById('btn');
+
+  btn.addEventListener('click', () => {
+    alert('Din bestilling er bekræftet');
+  });
+
+  btn.addEventListener('tap', () => {
+    alert('Din bestilling er bekræftet');
+  });
+
+</script>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $("#dropD").load("src","http://3.227.254.206:8090/events");
+
+  })
+
+</script>
 <script src="../js/navbar.js"></script>
 
 </body>

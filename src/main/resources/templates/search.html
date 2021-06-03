@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Søg</title>
+    <title>Søg efter event</title>
     <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../styles.css" rel="stylesheet"/>
@@ -12,127 +12,100 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 
+
 </head>
+
 <!-- BAGGRUND FARVE -->
 <body style="font-family: 'Calibri Light',serif; background-color: #ebf4f0" onload="widthCheck();">
 
 <!-- Navigation-->
+<div class="container" style="background-color: #ebf4f0">
+    <!-- mobile nav -->
+    <nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#ebf4f0">
 
-<!-- mobile nav -->
-<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#dff9ed";>
+        <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
-
-    <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
-
-        <li class="nav-item">
-            <!-- brug active for at highlighte den side man er inde på-->
-            <a class="nav-link" href="/">udforsk</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/search">søg</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/favorites">
-                <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="/profile">min profil</a>
-        </li>
-
-        <!-- dropdown -->
-        <li class="nav-item dropdown" hidden>
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-               data-bs-toggle="dropdown" aria-expanded="false">
-                More
-            </a>
-        </li>
-    </ul>
-
-</nav>
-
-<!-- pc navbar -->
-<nav class="navbar navbar-expand-lg navbar-light navbar-bg">
-    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
-        <ul class="navbar-nav mr-auto">
-            <li class="container-fluid">
-
+            <li class="nav-item">
+                <a class="nav-link" href="/">udforsk</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/">Udforsk</a>
+                <a class="nav-link" href="/search">søg</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/search">Søg</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/favorites">Favoritter</a>
-            </li>
-        </ul>
-    </div>
-    <div class="mx-auto order-0">
-
-    </div>
-</nav>
-
-<div class="container">
-    <div class="col-lg-10">
-        <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
-        </a></div>
-    </div>
-    <div class="col-lg-2">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown mr-auto">
-
-                <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                    <img src="../assets/dropdown.png" style="height: 25px; color: #707071">
+                <a class="nav-link" href="/favorites">
+                    <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
                 </a>
-                <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><a class="dropdown-item" href="#">Log ind</a></li>
-                    <li><a class="dropdown-item" href="#">Opret konto</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="/about">Om os</a></li>
-                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/profile">min profil</a>
+            </li>
+
+            <!-- dropdown -->
+            <li class="nav-item dropdown" hidden>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                </a>
             </li>
         </ul>
+
+    </nav>
+
+    <!-- pc navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="height: 10%; background-color:#ebf4f0">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+            <ul class="navbar-nav mr-auto">
+                <li class="container-fluid">
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Udforsk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/search">Søg</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/favorites">Favoritter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-2">
+            <ul class="navbar-nav ml-auto" style="float: right">
+                <li class="nav-item dropdown mr-auto">
+
+                    <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        <img src="../assets/dropdown.png" alt="" style="height: 25px; color: #707071">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li><a class="dropdown-item" href="#">Log ind</a></li>
+                        <li><a class="dropdown-item" href="#">Opret konto</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/about">Om os</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="col-lg-10">
+            <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
+            </a></div>
+        </div>
+
     </div>
-</div>
 
-<div class="container" style="padding-top: 40px">
-
-        <div class="col text-right">
-            <a href="#jobsearch-advanced" class="text-muted link-basic collapsed" id="jobsearch-advanced-toggle" data-toggle="collapse" >
-                <span class="toggle-text-hidden">Flere søgemuligheder</span>
-            </a>
-        </div>
-
-    <div id="jobsearch-advanced" class="row collapse">
-        <div class="col-lg-5 mb-3">
-            <label class="control-label" for="category">Kategori</label>
-            <span class="multiselect-native-select" id="categories">
-                <select class="form-control" id="category" multiple="" name="subid" placeholder="Vælg kategorier" title="Jobkategori">
-                <option value="1">Musik</option>
-                <option value="2">Teater</option>
-            </select>
-            </span>
-        </div>
-            <div class="col-lg-4 mb-3">
-                <label class="control-label" for="companies">Lokation</label>
-            <select class="form-control select2-hidden-accessible" id="companies" multiple="" name="companyid" placeholder="Virksomhedsnavn" title="Virksomhed" tabindex="-1"></select><span class="select2 select2-container select2-container--default jix-select2-empty" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple form-control" role="combobox" aria-haspopup="true" aria-expanded="false" title="Virksomhed" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="chrome-autocomplete-sucks" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Virksomhed" style="width: 100px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="container" style="padding-top: 40px">
+    <div class="container" style="padding-top: 40px">
 
         <input type="text" name="searchbox" id="searchbox" class="filterinput form-control"
                placeholder="Søg efter event"><br>
-    <div class="row text-center" id="cards">
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="row text-center" id="cards">
+            <div class="col-lg-3 col-md-6 mb-4">
 
+            </div>
         </div>
     </div>
 </div>
@@ -157,7 +130,7 @@
                 const div = document.getElementById('category')
                 $.each(result, function (key, value) {
                     div.innerHTML = div.innerHTML +
-                        '<option>' + value['categoryName'] +'</option>'
+                        '<option>' + value['categoryName'] + '</option>'
 
                 })
             }
@@ -166,7 +139,7 @@
 
     $(function () {
         $.ajax({
-            url: 'http://3.227.254.206:8090/shows',
+            url: 'http://3.227.254.206:8090/events',
             success: function (result) {
                 console.log(result)
                 const div = document.getElementById('cards')
@@ -177,7 +150,7 @@
                         '<div class="card-body">' +
                         '<h4 class="card-title">' + value['eventname'] + '</h4>' +
                         '<h6>' + value['eventdate'] + " " + value['eventlocation'] + " " + value['eventprice'] + '</h6></div>' +
-                        '<div class="card-footer"><a class="btn btn-primary" href="paymentstest.html/">Gå til bestilling</a></div>' +
+                        '<div class="card-footer"><a class="btn btn-primary" href="payment.html/">Gå til bestilling</a></div>' +
                         '</div>'
                 })
             }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>Culture Calls</title>
+    <title>Favoritter</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -15,30 +15,7 @@
           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <!-- test -->
-    <style>
-        .addReadMore.showlesscontent .SecSec,
-        .addReadMore.showlesscontent .readLess {
-            display: none;
-        }
 
-        .addReadMore.showmorecontent .readMore {
-            display: none;
-        }
-
-        .addReadMore .readMore,
-        .addReadMore .readLess {
-            font-weight: bold;
-            margin-left: 2px;
-            color: #cc6666;
-            cursor: pointer;
-        }
-
-        .addReadMoreWrapTxt.showmorecontent .SecSec,
-        .addReadMoreWrapTxt.showmorecontent .readLess {
-            display: block;
-        }
-    </style>
 
 </head>
 
@@ -46,64 +23,83 @@
 <body style="font-family: 'Calibri Light',serif; background-color: #ebf4f0" onload="widthCheck();">
 
 <!-- Navigation-->
+<div class="container" style="background-color: #ebf4f0">
+    <!-- mobile nav -->
+    <nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#ebf4f0">
 
-<!-- mobile nav -->
-<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#dff9ed";>
+        <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
-    <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
-
-        <li class="nav-item">
-            <!-- brug active for at highlighte den side man er inde på-->
-            <a class="nav-link" href="/">udforsk</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/search">søg</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/favorites">
-                <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="/profile">min profil</a>
-        </li>
-
-        <!-- dropdown -->
-        <li class="nav-item dropdown" hidden>
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-               data-bs-toggle="dropdown" aria-expanded="false">
-                More
-            </a>
-        </li>
-    </ul>
-
-</nav>
-
-<!-- pc navbar -->
-<nav class="navbar navbar-expand-lg navbar-light navbar-bg">
-    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
-        <ul class="navbar-nav mr-auto">
-            <li class="container-fluid">
-
+            <li class="nav-item">
+                <a class="nav-link" href="/">udforsk</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/">Udforsk</a>
+                <a class="nav-link" href="/search">søg</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/search">Søg</a>
+                <a class="nav-link" href="/favorites">
+                    <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
+                </a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link" href="/favorites">Favoritter</a>
+                <a class="nav-link" href="/profile">min profil</a>
+            </li>
+
+            <!-- dropdown -->
+            <li class="nav-item dropdown" hidden>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                </a>
             </li>
         </ul>
-    </div>
-</nav>
 
-<div class="container">
-    <div class="col-lg-10">
-        <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
-        </a></div>
+    </nav>
+
+    <!-- pc navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="height: 10%; background-color:#ebf4f0">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+            <ul class="navbar-nav mr-auto">
+                <li class="container-fluid">
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Udforsk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/search">Søg</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/favorites">Favoritter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-2">
+            <ul class="navbar-nav ml-auto" style="float: right">
+                <li class="nav-item dropdown mr-auto">
+
+                    <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        <img src="../assets/dropdown.png" alt="" style="height: 25px; color: #707071">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li><a class="dropdown-item" href="#">Log ind</a></li>
+                        <li><a class="dropdown-item" href="#">Opret konto</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/about">Om os</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="col-lg-10">
+            <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
+            </a></div>
+        </div>
+
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../js/navbar.js"></script>
@@ -118,29 +114,6 @@
     <input type="submit" value="Login" id="login-form-submit" style="background-color: #cc6666">
 </form>
 </div>
-<script>
-
-    const loginForm = document.getElementById("login-form");
-    const loginButton = document.getElementById("login-form-submit");
-    const loginErrorMsg = document.getElementById("login-error-msg");
-
-    loginButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        const username = loginForm.username.value;
-        const password = loginForm.password.value;
-
-        if (username === "user" && password === "user") {
-            window.location.href = "http://3.227.254.206:8091/profile";
-
-        }
-        else if  (username === "admin" && password === "admin") {
-            window.location.href = "http://3.227.254.206:8091";
-        } else {
-            loginErrorMsg.style.opacity = 1;
-        }
-    })
-</script>
-
 
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossOrigin="anonymous"></script>

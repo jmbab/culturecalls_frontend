@@ -1,76 +1,109 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Nyt event</title>
 
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <!--     Bootstrap for JS-->
-  <link rel="stylesheet" href="/style.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-          crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-          crossorigin="anonymous"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Opret nyt event</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico"/>
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
 </head>
+
+<!-- BAGGRUND FARVE -->
 <body style="font-family: 'Calibri Light',serif; background-color: #ebf4f0" onload="widthCheck();">
-<nav class="navbar navbar-expand navbar-light navbar-bg fixed-bottom" id="navbar" style="height: 10%; background-color:#dff9ed">
 
-  <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw; ">
+<!-- Navigation-->
+<div class="container" style="background-color: #ebf4f0">
+  <!-- mobile nav -->
+  <nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#ebf4f0">
 
-    <li class="nav-item">
-      <!-- brug active for at highlighte den side man er inde på-->
-      <a class="nav-link" href="/">udforsk</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/search">søg</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/favorites">
-        <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
-      </a>
-    </li>
+    <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
-    <li class="nav-item">
-      <a class="nav-link" href="/profile">min profil</a>
-    </li>
-
-    <!-- dropdown -->
-    <li class="nav-item dropdown" hidden="">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        More
-      </a>
-    </li>
-  </ul>
-
-</nav>
-<nav class="navbar navbar-expand-lg navbar-light navbar-bg" style="height: 10%; background-color:#dff9ed">
-  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
-    <ul class="navbar-nav mr-auto">
-      <li class="container-fluid">
-
+      <li class="nav-item">
+        <a class="nav-link" href="/">udforsk</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/">Udforsk</a>
+        <a class="nav-link" href="/search">søg</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/search">Søg</a>
+        <a class="nav-link" href="/favorites">
+          <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
+        </a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="/favorites">Favoritter</a>
+        <a class="nav-link" href="/profile">min profil</a>
+      </li>
+
+      <!-- dropdown -->
+      <li class="nav-item dropdown" hidden>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+           data-bs-toggle="dropdown" aria-expanded="false">
+          More
+        </a>
       </li>
     </ul>
+
+  </nav>
+
+  <!-- pc navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="height: 10%; background-color:#ebf4f0">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+      <ul class="navbar-nav mr-auto">
+        <li class="container-fluid">
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Udforsk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search">Søg</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/favorites">Favoritter</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-2">
+      <ul class="navbar-nav ml-auto" style="float: right">
+        <li class="nav-item dropdown mr-auto">
+
+          <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            <img src="../assets/dropdown.png" alt="" style="height: 25px; color: #707071">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-lg-end">
+            <li><a class="dropdown-item" href="#">Log ind</a></li>
+            <li><a class="dropdown-item" href="#">Opret konto</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/about">Om os</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="col-lg-10">
+      <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
+      </a></div>
+    </div>
+
   </div>
-</nav>
-<div class="container" id="main">
   <div class="row">
-    <h1>Opret nyt event</h1>
+
     <div class="col-md-10 col-sm">
+      <h1>Opret nyt event</h1>
       <form>
         <div class="mb-3">
           <label for="eventname" class="form-label">Titel</label>
@@ -97,10 +130,10 @@
           <input type="time" class="form-control" required id="eventtime">
         </div>
         <div class="mb-3">
-          <label for="eventdate" class="form-label">Dato</label><br>
+          <label for="eventDate" class="form-label">Dato</label><br>
           <input type="date" min="2021-06-01" max="2099-01-01" required  id="eventDate"><br>
         </div>
-        <button type="button" class="btn btn-primary" id="add-event" style="background-color: #1e7e34; border-color: #1e7e34">Opret</button>
+        <button type="button" class="btn btn-primary" id="add-event" style="background-color: #79B787FF; border-color: #79B787FF">Opret</button>
       </form>
       <p id="err" style="color: red"></p>
     </div>
@@ -116,7 +149,7 @@
 
   $(document).ready(function () {
     $.ajax({
-      url: "http://localhost:8090/categories",
+      url: "http://3.227.254.206:8090/categories",
       success: function (result) {
         let options = " ";
         $.each(result, function (key, val) {
@@ -130,7 +163,7 @@
 
   $(document).ready(function () {
     $.ajax({
-      url: "http://localhost:8090/locations",
+      url: "http://3.227.254.206:8090/locations",
       success: function (result) {
         let options = " ";
         $.each(result, function (key, val) {
@@ -175,7 +208,7 @@
       console.log(dataString);
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:8090/newevent',
+        url: 'http://3.227.254.206:8090/newevent',
         dataType: 'json',
         //stringify formatere den JSON data der skal sendes til datatyper der passer til java objekterne
         data: JSON.stringify(dataString),

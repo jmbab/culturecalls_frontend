@@ -15,7 +15,7 @@ $(document).ready(function (){
             console.log(id)
             console.log(arr)
             $.ajax({
-                url: "http://localhost:8090/events/" + id,
+                url: "http://3.227.254.206:8090/events/" + id,
                 type: 'DELETE',
                 success: function (data) {
                     console.log(data)
@@ -29,7 +29,7 @@ $(document).ready(function (){
 
     $(function () {
         $.ajax({
-            url: "http://localhost:8090/events",
+            url: "http://3.227.254.206:8090/events",
             success: function (result) {
                 console.log(result)
                 let tableRows = "";

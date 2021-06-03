@@ -3,7 +3,7 @@ let bookingString;
 
 $(document).ready(function() {
     // Construct URL object using current browser URL
-    var url = new URL('http://3.227.254.206:8090/shows/');
+    var url = new URL('http://3.227.254.206:8090/events');
 
     // Get query parameters object
     var params = url.searchParams;
@@ -36,7 +36,7 @@ $(function () {
 
         console.log(dataString.events.idevents = bookingString);
         $.ajax({
-            url: 'http://3.227.254.206:8090/shows/',
+            url: 'http://3.227.254.206:8090/events',
             type: 'POST',
             dataType: 'json',
             data: JSON.stringify(dataString),

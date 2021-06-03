@@ -46,14 +46,13 @@
 <body style="font-family: 'Calibri Light',serif; background-color: #ebf4f0" onload="widthCheck();">
 
 <!-- Navigation-->
-
+<div class="container" style="background-color: #ebf4f0">
 <!-- mobile nav -->
-<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#dff9ed";>
+<nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#ebf4f0">
 
     <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
 
         <li class="nav-item">
-            <!-- brug active for at highlighte den side man er inde på-->
             <a class="nav-link" href="/">udforsk</a>
         </li>
         <li class="nav-item">
@@ -81,7 +80,7 @@
 </nav>
 
 <!-- pc navbar -->
-<nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+<nav class="navbar navbar-expand-lg navbar-light" style="height: 10%; background-color:#ebf4f0">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
         <ul class="navbar-nav mr-auto">
             <li class="container-fluid">
@@ -98,6 +97,24 @@
             </li>
         </ul>
     </div>
+    <div class="col-lg-2">
+        <ul class="navbar-nav ml-auto" style="float: right">
+            <li class="nav-item dropdown mr-auto">
+
+                <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                    <img src="../assets/dropdown.png" alt="" style="height: 25px; color: #707071">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><a class="dropdown-item" href="#">Log ind</a></li>
+                    <li><a class="dropdown-item" href="#">Opret konto</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/about">Om os</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <div class="container">
@@ -105,24 +122,7 @@
         <div class="jumbotron"><a href="/"><img src="../assets/Culture-Calls-logo-banner-03w.png" alt="" width=100%>
         </a></div>
     </div>
-    <div class="col-lg-2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown mr-auto">
 
-                    <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                        <img src="../assets/dropdown.png" style="height: 25px; color: #707071">
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-lg-end">
-                        <li><a class="dropdown-item" href="#">Log ind</a></li>
-                        <li><a class="dropdown-item" href="#">Opret konto</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="/about">Om os</a></li>
-                    </ul>
-                </li>
-            </ul>
-    </div>
 </div>
 
 <div class="container" style="padding-top: 5%">
@@ -526,12 +526,8 @@
 
     </div>
 </div>
+</div>
 
-
-<!-- Footer-->
-<footer class="py-5 navbar-bg">
-
-</footer>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
@@ -540,65 +536,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-
-    function AddReadMore() {
-        //This limit you can set after how much characters you want to show Read More.
-        var carLmt = 300;
-        // Text to show when text is collapsed
-        var readMoreTxt = " ... Read More";
-        // Text to show when text is expanded
-        var readLessTxt = " Read Less";
-
-
-        //Traverse all selectors with this class and manupulate HTML part to show Read More
-        $(".addReadMore").each(function() {
-            if ($(this).find(".firstSec").length)
-                return;
-
-            var allstr = $(this).text();
-            if (allstr.length > carLmt) {
-                var firstSet = allstr.substring(0, carLmt);
-                var secdHalf = allstr.substring(carLmt, allstr.length);
-                var strtoadd = firstSet + "<span class='SecSec'>" + secdHalf + "</span><span class='readMore'  title='Click to Show More'>" + "+"+ "</span><span class='readLess' title='Click to Show Less'>" + "-" + "</span>";
-                $(this).html(strtoadd);
-            }
-
-        });
-        //Read More and Read Less Click Event binding
-        $(document).on("click", ".readMore,.readLess", function() {
-            $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
-        });
-    }
-    $(function() {
-        //Calling function after Page Load
-        AddReadMore();
-    });
-
-</script>
-
-
-</script>
-<script>
-
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
-</script>
+<script src="../js/readmore.js"></script>
 <script src="../js/navbar.js"></script>
 </body>
 </html>

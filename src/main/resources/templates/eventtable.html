@@ -24,7 +24,84 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
-<body>
+
+<!-- BAGGRUND FARVE -->
+<body style="font-family: 'Calibri Light',serif; background-color: #ebf4f0" onload="widthCheck();">
+
+<!-- Navigation-->
+<div class="container" style="background-color: #ebf4f0">
+  <!-- mobile nav -->
+  <nav class="navbar navbar-expand navbar-light navbar-bg" id="navbar" style="height: 10%; background-color:#ebf4f0">
+
+    <ul class="navbar-nav align-items-center mx-auto container" style="font-size: 5vw;">
+
+      <li class="nav-item">
+        <a class="nav-link" href="/">udforsk</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/search">søg</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/favorites">
+          <img src="../assets/heart-outline.png" class="img-fluid" style="height: 5vw" alt="">
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">min profil</a>
+      </li>
+
+      <!-- dropdown -->
+      <li class="nav-item dropdown" hidden>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+           data-bs-toggle="dropdown" aria-expanded="false">
+          More
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+
+  <!-- pc navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="height: 10%; background-color:#ebf4f0">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" style="font-size: larger">
+      <ul class="navbar-nav mr-auto">
+        <li class="container-fluid">
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Udforsk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search">Søg</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/favorites">Favoritter</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-2">
+      <ul class="navbar-nav ml-auto" style="float: right">
+        <li class="nav-item dropdown mr-auto">
+
+          <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            <img src="../assets/dropdown.png" alt="" style="height: 25px; color: #707071">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-lg-end">
+            <li><a class="dropdown-item" href="#">Log ind</a></li>
+            <li><a class="dropdown-item" href="#">Opret konto</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/about">Om os</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
 <div class="container" id="main">
   <div class="row">
     <div class="col-md-12">
@@ -52,10 +129,12 @@
     </div>
   </div>
 </div>
-
+</div>
+</body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../js/eventsAdminPage.js"></script>
+<script src="../js/navbar.js"></script>
 
 
-</body>
+
 </html>
